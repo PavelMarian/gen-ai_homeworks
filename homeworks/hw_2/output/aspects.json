@@ -1,0 +1,606 @@
+[
+  {
+    "user_name": "Алексей",
+    "aspects": [
+      {
+        "aspect": "price",
+        "sentiment": "positive",
+        "confidence": 0.9,
+        "quote": "Подписка стоит своих денег."
+      }
+    ]
+  },
+  {
+    "user_name": "Марина",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Счётчик шагов иногда врут — показывает 2000, когда я прошла от силы 500."
+      },
+      {
+        "aspect": "design",
+        "sentiment": "positive",
+        "confidence": 0.8,
+        "quote": "дизайн приятный"
+      }
+    ]
+  },
+  {
+    "user_name": "Денис",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Приложение жутко тормозит. Чтобы открыть дневник питания, нужно ждать по 10 секунд."
+      },
+      {
+        "aspect": "ads",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "И ещё эти постоянные предложения купить премиум. Я уже купил, чего вы меня донимаете?"
+      }
+    ]
+  },
+  {
+    "user_name": "Екатерина",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "positive",
+        "confidence": 0.9,
+        "quote": "Синхронизация с часами работает отлично."
+      }
+    ]
+  },
+  {
+    "user_name": "Иван",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "После обновления перестал синхронизироваться с браслетом"
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "поддержка молчит"
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Верните деньги за подписку!"
+      }
+    ]
+  },
+  {
+    "user_name": "Ольга",
+    "aspects": [
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "И ещё этот бот в поддержке — бесит, на любой вопрос отвечает «заполните форму на сайте»."
+      }
+    ]
+  },
+  {
+    "user_name": "Сергей",
+    "aspects": []
+  },
+  {
+    "user_name": "Анна",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "через месяц приложение начало вылетать при открытии дневника калорий"
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Поддержка ответила через пять дней, сказали переустановить. Не помогло."
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Купила подписку на год... Обидно за деньги."
+      }
+    ]
+  },
+  {
+    "user_name": "Павел",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "некоторые упражнения странные, с ними можно травму получить"
+      },
+      {
+        "aspect": "design",
+        "sentiment": "negative",
+        "confidence": 0.7,
+        "quote": "Лучше бы видео-инструкции нормальные сделали."
+      }
+    ]
+  },
+  {
+    "user_name": "Наталья",
+    "aspects": []
+  },
+  {
+    "user_name": "Виктор",
+    "aspects": [
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Написал в техподдержку, что списали двойную оплату за премиум — тишина уже две недели."
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "списали двойную оплату за премиум"
+      }
+    ]
+  },
+  {
+    "user_name": "Юлия",
+    "aspects": [
+      {
+        "aspect": "ads",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "реклама бесит. Не премиум — так баннер на полэкрана и закрыть нельзя. Пять раз свайпаешь, всё равно вылазит."
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Купила премиум — всё ок, но дороговато для такой простой программы."
+      }
+    ]
+  },
+  {
+    "user_name": "Андрей",
+    "aspects": [
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "здесь за 699 в месяц — перебор"
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "чат с тренером — просто бот, который шлёт заготовки"
+      }
+    ]
+  },
+  {
+    "user_name": "Татьяна",
+    "aspects": []
+  },
+  {
+    "user_name": "Максим",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Стабильно зависает в пятницу вечером. Я тренируюсь после работы, а тут — бац, не грузится."
+      },
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Может, сервера у них не выдерживают."
+      }
+    ]
+  },
+  {
+    "user_name": "Светлана",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "база продуктов российских мало — приходится самой всё вручную вбивать"
+      }
+    ]
+  },
+  {
+    "user_name": "Дмитрий",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Дважды оплатил подписку через гугл, деньги списали, а доступ не открылся."
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Поддержка в ответ — просто «подождите 24 часа». Прошла неделя."
+      }
+    ]
+  },
+  {
+    "user_name": "Елена",
+    "aspects": []
+  },
+  {
+    "user_name": "Роман",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Интерфейс перегружен, куча ненужных фишек."
+      }
+    ]
+  },
+  {
+    "user_name": "Кристина",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "иногда странно считает сожжённые калории. Пробежка 5 км — показывает 800 ккал, что явно завышено."
+      }
+    ]
+  },
+  {
+    "user_name": "Владимир",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "positive",
+        "confidence": 0.9,
+        "quote": "Синхронизация с часами Xiaomi и Apple Watch без проблем."
+      }
+    ]
+  },
+  {
+    "user_name": "Галина",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Постоянно вылетает, особенно когда открываешь историю веса."
+      },
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "В дневнике питания половина продуктов из моих сохранений пропадает."
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Поддержка не отвечает."
+      }
+    ]
+  },
+  {
+    "user_name": "Артём",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Автоопределение активности неточное — думает что я сплю, когда я читаю книгу."
+      }
+    ]
+  },
+  {
+    "user_name": "Ирина",
+    "aspects": []
+  },
+  {
+    "user_name": "Никита",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "После первого же запуска запросило доступ ко всем данным, включая местоположение и контакты. Зачем трекеру шагов моя адресная книга?"
+      }
+    ]
+  },
+  {
+    "user_name": "Валентина",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "positive",
+        "confidence": 0.9,
+        "quote": "Отличный дизайн, всё красиво и современно."
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "цена за премиум кусается — 699 в месяц или 4490 в год. Для тех, у кого зарплата 40 тысяч — дороговато."
+      }
+    ]
+  },
+  {
+    "user_name": "Георгий",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "за последние два месяца появилось слишком много багов. Статусы «завершил тренировку» не обновляются, графики веса иногда рисуются с нуля."
+      }
+    ]
+  },
+  {
+    "user_name": "Алина",
+    "aspects": []
+  },
+  {
+    "user_name": "Станислав",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Ничего не понятно с первого раза, терминология сложная. Подсказки нет, обучение отсутствует."
+      }
+    ]
+  },
+  {
+    "user_name": "Полина",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "сильно грузит телефон (Android 12, 4GB RAM). Виснет, греется, аккумулятор садится за пару часов."
+      }
+    ]
+  },
+  {
+    "user_name": "Артём",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "После обновления перестал работать счётчик калорий. Показывает какую-то ерунду: 5000 калорий за час ходьбы."
+      }
+    ]
+  },
+  {
+    "user_name": "Екатерина",
+    "aspects": []
+  },
+  {
+    "user_name": "Дмитрий",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Каждые 5 минут вылетает. Куда ни ткни — ошибка."
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "И это за 999 рублей в месяц? Стыдно брать такие деньги."
+      }
+    ]
+  },
+  {
+    "user_name": "Алина",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "positive",
+        "confidence": 0.8,
+        "quote": "Интерфейс красивый"
+      },
+      {
+        "aspect": "design",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Невозможно найти историю тренировок, кнопки нелогичные."
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Поддержка отвечает через 3 дня."
+      }
+    ]
+  },
+  {
+    "user_name": "Сергей",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Приложение съело все мои данные после сброса телефона. Ни облачной синхронизации, ни экспорта."
+      }
+    ]
+  },
+  {
+    "user_name": "Ольга",
+    "aspects": []
+  },
+  {
+    "user_name": "Максим",
+    "aspects": [
+      {
+        "aspect": "ads",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "навязчивая реклама премиума бесит. Каждый раз при открытии баннер на полэкрана."
+      }
+    ]
+  },
+  {
+    "user_name": "Наталья",
+    "aspects": []
+  },
+  {
+    "user_name": "Иван",
+    "aspects": [
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Подписался на триал, забыл отменить — списали за год вперёд. Деньги не вернули"
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "поддержка игнорирует"
+      }
+    ]
+  },
+  {
+    "user_name": "Юлия",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "сплошные лаги. Видео с тренировками не грузятся"
+      },
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "весы не синхронизируются с MiFit"
+      }
+    ]
+  },
+  {
+    "user_name": "Владимир",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "positive",
+        "confidence": 0.9,
+        "quote": "Интерфейс минималистичный, ничего лишнего."
+      }
+    ]
+  },
+  {
+    "user_name": "София",
+    "aspects": []
+  },
+  {
+    "user_name": "Андрей",
+    "aspects": [
+      {
+        "aspect": "design",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "дизайн устаревший"
+      },
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.7,
+        "quote": "За такие деньги можно было бы сделать что-то получше."
+      }
+    ]
+  },
+  {
+    "user_name": "Марина",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Регистрация не проходит, подтверждение по смс не приходит."
+      },
+      {
+        "aspect": "ads",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "Зато спам на почту льют каждый день."
+      }
+    ]
+  },
+  {
+    "user_name": "Павел",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "после обновления сбросились настройки"
+      }
+    ]
+  },
+  {
+    "user_name": "Елена",
+    "aspects": [
+      {
+        "aspect": "performance",
+        "sentiment": "negative",
+        "confidence": 0.95,
+        "quote": "Очень медленно работает. Запускается секунд 20, переключение между экранами с лагами."
+      }
+    ]
+  },
+  {
+    "user_name": "Антон",
+    "aspects": [
+      {
+        "aspect": "price",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Заплатил 1500 — получил кота в мешке. Верните деньги."
+      }
+    ]
+  },
+  {
+    "user_name": "Ксения",
+    "aspects": []
+  },
+  {
+    "user_name": "Виктор",
+    "aspects": []
+  },
+  {
+    "user_name": "Анонимный пользователь 12",
+    "aspects": [
+      {
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "confidence": 0.8,
+        "quote": "сырое приложение с кучей багов"
+      },
+      {
+        "aspect": "support",
+        "sentiment": "negative",
+        "confidence": 0.9,
+        "quote": "Чат-бот тупит, отвечает невпопад."
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "fidelity": 1.0,
+  "ghost_quotes_count": 1,
+  "ghost_quotes_percent": 1.639344262295082,
+  "validation_errors": 0,
+  "ie_time_sec": 49.90786051750183,
+  "aspect_time_sec": 25.427776098251343,
+  "discover_time_sec": 7.615968227386475,
+  "mr_time_sec": 33.34006953239441,
+  "judge_time_sec": 11.040118932723999,
+  "total_time_sec": 127.33179330825806,
+  "n_reviews": 50,
+  "n_aspects_fixed": 61,
+  "n_aspects_discovered": 8,
+  "judge_overall_score": 0.8,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_cost_usd": 0.0
+}
