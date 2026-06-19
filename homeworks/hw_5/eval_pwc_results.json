@@ -1,0 +1,1231 @@
+[
+  {
+    "id": "Q1",
+    "query": "Во сколько раз USD подорожал с 1 января 2022 по сегодня?",
+    "comment": "Класс ошибки C: одиночный часто считает в уме, не зовёт calculate. PWC должен починить — Планировщик обязан добавить calculate-подвопрос.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял 74,29 руб., а сегодня (19 июня 2026) — 73,36 руб. Таким образом, доллар **подешевел** примерно в **0,99 раза** (то есть на ~1,3%), а не под"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,29 руб.**, а сегодня (19 июня 2026 года) — **73,36 руб.** Таким образом, доллар не подорожал, а **подешевел примерно в 0,99 раза** (то"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,29 руб.**, а сегодня (19 июня 2026 года) — **73,36 руб.** Доллар не подорожал, а наоборот, **подешевел в 0,987 раза**, то есть примерн"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,29 руб.**, а сегодня (19 июня 2026) — **73,36 руб.** Доллар не подорожал, а наоборот, **подешевел примерно в 0,987 раза**, то есть при"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,29 руб.**, а сегодня (19 июня 2026 года) — **73,36 руб.** Доллар не подорожал, а наоборот, **подешевел в ~0,987 раза**, то есть пример"
+        }
+      ],
+      "pass": 5
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,2926 рубля** за доллар. · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 2,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD (данные ЦБ РФ). · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля**"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,2926 рубля** за доллар. · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Отнош"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD (данные ЦБ РФ). · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля**"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD. · Курс доллара США на сегодня, 19 июня 2026 года, составляет **73,36 рубля** за 1 USD (по д"
+        }
+      ],
+      "pass": 1
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD (данные ЦБ РФ). · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля**"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD (данные ЦБ РФ). · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля**"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Официальный курс доллара США на 1 января 2022 года составлял **74,2926 рубля** за 1 USD (данные ЦБ РФ). · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля**"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял **74,2926 рубля** за доллар. · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD. · Отношение курса USD н"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс USD на 1 января 2022 года составлял 74,2926 рубля за доллар. · Курс доллара США на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс USD "
+        }
+      ],
+      "pass": 4
+    }
+  },
+  {
+    "id": "Q2",
+    "query": "Какая сейчас реальная ключевая ставка, если инфляцию брать по последнему доступному месяцу, а не по году?",
+    "comment": "Класс ошибки B: одиночный не умеет искать «последний доступный» месяц, зацикливается. PWC должен разбить на шаги.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная ключевая ставка** (ключевая ставка минус инфляция за последний доступный месяц — март 2025) составляет **5,66% годовых**.\n\n*Примечание: данные по ключевой ставке получен"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная ключевая ставка** (ключевая ставка минус инфляция за последний доступный месяц — март 2025) составляет **5,66% годовых**.\n\n*Примечание: данные по ключевой ставке получен"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная ключевая ставка** (ключевая ставка минус инфляция за последний доступный месяц — март 2025) составляет **5,66% годовых**.\n\n*Примечание: данные по ключевой ставке получен"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная ключевая ставка** (ключевая ставка минус инфляция за последний доступный месяц — март 2025) составляет **5,66% годовых**.\n\n*Примечание: данные по ключевой ставке получен"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Текущая реальная ключевая ставка (с учётом инфляции за последний доступный месяц — апрель 2025 года) составляет **5,77% годовых**.\n\n*Примечание: данные по ключевой ставке получены "
+        }
+      ],
+      "pass": 5
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · (ошибка: agent exceeded max_iter=5) · Последний доступный месяц —"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Данные за март 2025 года доступны (источник — локальный архив Рос"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Данные по инфляции за апрель 2025 года доступны (10,23% г/г). Это"
+        }
+      ],
+      "pass": 3
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Инфляция (ИПЦ, % г/г) за март 2025 года составила **10,34%** (дан"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Данные по инфляции за апрель 2025 года доступны (10,23% г/г, из л"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 2
+    }
+  },
+  {
+    "id": "Q3",
+    "query": "Какова накопленная инфляция с января 2022 по март 2026? Рассчитай как произведение всех (1 + ипц_м/100) по месяцам.",
+    "comment": "Класс ошибки D (граница паттерна): требует get_inflation за много месяцев + большое calculate-выражение. Одиночный галлюцинирует get_cumulative_inflation; PWC обычно тоже (Планировщик может добавить выдуманный инструмент в план). Это — повод для Schema-Validator в домашке.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": false,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": false,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Хм, результат 85.87 — это множитель, то есть цены выросли в 85.87 раз. Это выглядит нереалистично. Давайте перепроверю — возможно, я неправильно понял задачу.\n\nПользователь просит:"
+        },
+        {
+          "ok": false,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": false,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": false,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 1
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 3,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 0
+    }
+  },
+  {
+    "id": "Q4",
+    "query": "Какова средняя инфляция за последние 3 года (2023, 2024, 2025)?",
+    "comment": "Требует get_inflation за несколько лет и calculate для среднего.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Средняя инфляция (ИПЦ, % г/г) за последние 3 года по данным на конец каждого года составила **8,15%**.\n\nВот значения по годам:\n- **2023** (декабрь): 7,42%\n- **2024** (декабрь): 9,5"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Средняя инфляция (ИПЦ, % г/г) за последние три доступных точки — декабрь 2023 (7,42%), декабрь 2024 (9,52%) и март 2025 (10,34%) — составляет **9,09% годовых**.\n\n*Примечание: 2025 "
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Средняя инфляция за последние три доступных периода (декабрь 2023 — 7,42%, декабрь 2024 — 9,52%, февраль 2025 — 10,06%) составляет **9,0% годовых**.\n\n*Примечание: поскольку 2025 го"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Средняя инфляция (ИПЦ, % г/г) за последние 3 года по данным на конец каждого года составила **8,15%**.\n\nВот значения по годам:\n- **2023** (декабрь): 7,42%\n- **2024** (декабрь): 9,5"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Средняя инфляция (ИПЦ, % г/г) за последние 3 года (декабрь 2023, декабрь 2024, декабрь 2025) составила **8,15%**.\n\nЕсли округлить до сотых — **8,15% годовых**."
+        }
+      ],
+      "pass": 5
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "Последний доступный месяц в 2025 году — **декабрь** (данные Росстата из локального архива, ИПЦ = 7,5% г/г). · Инфляция на конец 2023 года (декабрь 2023) составила **7,42%** годовых"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "(ошибка: agent exceeded max_iter=5) · Инфляция на конец 2023 года (декабрь 2023 к декабрю 2022) составила **7,42%** годовых (данные Росстата). · Инфляция на конец 2024 года (декабр"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "Последний доступный месяц в 2025 году — **декабрь** (данные Росстата из локального архива, ИПЦ = 7,5% г/г). · Инфляция на конец декабря 2023 года составила **7,42%** годовых (данны"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "(ошибка: agent exceeded max_iter=5) · Инфляция (ИПЦ, % г/г) на конец 2023 года (декабрь) составила **7,42%** (данные из локального архива Росстата). · Инфляция на конец 2024 года ("
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Инфляция на конец 2023 года (декабрь 2023 к декабрю 2022) составила **7,42%** (данные из локального архива Росстата). · Инфляция в России на конец 2024 года (декабрь к декабрю пред"
+        }
+      ],
+      "pass": 5
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "Данные за декабрь 2025 года доступны (источник — локальный архив Росстата).\n\n**Ответ:** Последний доступный месяц для данных по инфляции в 2025 году — **декабрь 2025 года** (ИПЦ 7,"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Инфляция на конец 2023 года (декабрь к декабрю предыдущего года) составила **7,42%** (данные Росстата из локального архива). · Инфляция на конец 2024 года (декабрь к декабрю предыд"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Инфляция (ИПЦ, % г/г) на конец декабря 2023 года составила **7,42%** (данные из локального архива Росстата). · Инфляция (ИПЦ, % г/г) на конец декабря 2024 года составила **9,52%** "
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Данные по инфляции за декабрь 2025 года доступны (7,5% г/г, из локального архива Росстата). Проверю, есть ли более свежие месяцы — январь 2026 уже не входит в 2025 год, так что пос"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "(ошибка: agent exceeded max_iter=5) · Инфляция на конец 2023 года (декабрь 2023) составила **7,42%** годовых (данные Росстата). · Инфляция на конец декабря 2024 года составила **9,"
+        }
+      ],
+      "pass": 5
+    }
+  },
+  {
+    "id": "Q5",
+    "query": "Сравни курс USD, EUR и CNY на сегодня",
+    "comment": "Естественная параллельность: 3 независимых get_fx_rate.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "На сегодня (4 апреля 2025 года) официальные курсы ЦБ РФ следующие:\n\n- **USD (доллар США)** — **84,38 ₽**\n- **EUR (евро)** — **93,16 ₽**\n- **CNY (китайский юань)** — **11,48 ₽**\n\nЕв"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Сегодня, 19 июня 2026 года, официальные курсы ЦБ РФ составляют:\n\n- **USD** — 73,36 ₽\n- **EUR** — 85,03 ₽\n- **CNY** — 10,83 ₽\n\nЕвро остаётся самым дорогим, доллар — заметно дешевле,"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Вот курсы ЦБ РФ на **16 апреля 2025 года**:\n\n| Валюта | Курс (рублей за единицу) |\n|--------|--------------------------|\n| **USD** (доллар США) | **82,30 ₽** |\n| **EUR** (евро) | *"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Вот курсы ЦБ РФ на **16 апреля 2025 года**:\n\n| Валюта | Курс (руб. за 1 ед.) |\n|--------|---------------------|\n| **USD** (доллар США) | **82,30 ₽** |\n| **EUR** (евро) | **93,68 ₽*"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Сегодня, 19 июня 2026 года, официальные курсы ЦБ РФ составляют:\n\n- **USD** — 73,36 ₽\n- **EUR** — 85,03 ₽\n- **CNY** — 10,83 ₽\n\nЕвро остаётся самой дорогой валютой, доллар — на второ"
+        }
+      ],
+      "pass": 5
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 2,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        }
+      ],
+      "pass": 5
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        },
+        {
+          "ok": true,
+          "used_tools": [],
+          "plan_tools": [
+            "get_fx_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "iterations": 1,
+          "answer_preview": "Курс доллара США к рублю на сегодня (19 июня 2026 года) составляет **73,36 рубля** за 1 USD по данным ЦБ РФ. · Курс EUR к рублю на сегодня (19 июня 2026 года) составляет **85,03 ру"
+        }
+      ],
+      "pass": 5
+    }
+  },
+  {
+    "id": "Q6",
+    "query": "Какова реальная доходность вклада при текущей ключевой ставке за вычетом последней доступной инфляции?",
+    "comment": "Лично интересный макро-вопрос.",
+    "n": 5,
+    "single": {
+      "runs": [
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная доходность вклада при текущей ключевой ставке составляет 5,66% годовых** (16,00% ключевая ставка минус 10,34% инфляции г/г за март 2025).\n\n*Примечание: данные по ключево"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Текущая ключевая ставка ЦБ составляет **16,0%** годовых (данные из локального архива, так как сайт ЦБ в моменте недоступен), а последняя доступная инфляция (март 2025 г.) — **10,34"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Текущая ключевая ставка ЦБ составляет **16,0%** годовых (данные из локального архива, так как сайт ЦБ в моменте недоступен), а последняя доступная инфляция (март 2025 г.) — **10,34"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "Текущая ключевая ставка ЦБ составляет **16,0%** годовых (данные из локального архива, так как сайт ЦБ в моменте недоступен), а последняя доступная инфляция (март 2025 г.) — **10,34"
+        },
+        {
+          "ok": true,
+          "used_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": "**Реальная доходность вклада при текущей ключевой ставке составляет 9,2% годовых** (16,0% ключевая ставка минус 6,8% инфляция г/г за март 2026).\n\n*Примечание: данные по ключевой ст"
+        }
+      ],
+      "pass": 5
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,06%** за февраль 20"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,06%** по данным на "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,34%** за март 2025 "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых** (действует с 20 марта 2026 года). · Последняя доступная инфляция (ИП"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,34%** за март 2025 "
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validated": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,34%** за март 2025 "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,06%** по данным на "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,23%** на конец апре"
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,06%** по данным на "
+        },
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [
+            "calculate",
+            "get_inflation",
+            "get_key_rate"
+          ],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "iterations": 1,
+          "answer_preview": "По данным из локального архива (ЦБ в моменте недоступен), текущая ключевая ставка составляет **16.00% годовых**. · Последняя доступная инфляция (ИПЦ г/г) — **10,34%** на конец март"
+        }
+      ],
+      "pass": 0
+    }
+  }
+]
