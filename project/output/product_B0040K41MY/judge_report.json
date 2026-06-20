@@ -1,0 +1,121 @@
+{
+  "assertions": [
+    {
+      "assertion": "Delicious",
+      "supported": true,
+      "evidence": [
+        "Delicious healthy snack",
+        "Thick and chewy, not traditional jerky but delicious nonetheless",
+        "Simply delicious and healthy too!",
+        "This is just simply delicious!",
+        "A tasty dessert but way too sweet for breakfast"
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly describe the product as delicious or tasty, strongly supporting the assertion."
+    },
+    {
+      "assertion": "Crunchy",
+      "supported": true,
+      "evidence": [
+        "Crunchy & Sweet",
+        "Crunchy and Vanilla-y",
+        "Crunchy Vanilla",
+        "Sweet, pleasant taste. Crunchy but not gritty.",
+        "These are amazing! Sweet, crunchy and satisfying.",
+        "the ones in the bag that they came in stayed crunchy and are still crunchy."
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews explicitly mention 'crunchy' as a positive attribute, confirming the assertion."
+    },
+    {
+      "assertion": "Gluten free",
+      "supported": true,
+      "evidence": [
+        "This cereal is gluten free.",
+        "Nature's Path Crunchy Vanilla Sunrise is gluten free",
+        "looking for a gluten free cereal"
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews confirm the product is gluten free."
+    },
+    {
+      "assertion": "Light",
+      "supported": true,
+      "evidence": [
+        "Nice, light, and full of flavor",
+        "If you instead prefer a very light breakfast or want to eat this as a snack, I think it is a good option."
+      ],
+      "confidence": 0.9,
+      "comment": "The assertion 'Light' is supported by direct mentions of 'light' in the context, both as a flavor description and as a meal option."
+    },
+    {
+      "assertion": "Flavorful",
+      "supported": true,
+      "evidence": [
+        "Flavor is smooth without bitter after taste.",
+        "Very flavorful and full bodied...",
+        "Sweet, pleasant taste."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention positive flavor attributes, supporting the assertion."
+    },
+    {
+      "assertion": "Holds up well in milk",
+      "supported": true,
+      "evidence": [
+        "I liked that it stays crunchy while in milk.",
+        "Tasted good right out of the box and also with milk.",
+        "Very flavorful, seemed to hold up to milk well, and did not leave an overly full feeling"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews confirm the cereal maintains crunchiness and holds up well in milk."
+    },
+    {
+      "assertion": "Good with yogurt",
+      "supported": true,
+      "evidence": [
+        "still maintains a great crunch when mixed with plain yogurt (my favorite way of eating it)",
+        "I usualy eat cereal with greek yogurt and it seemed to go well with it"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention the cereal pairs well with yogurt, confirming the assertion."
+    },
+    {
+      "assertion": "Too sweet",
+      "supported": true,
+      "evidence": [
+        "Too Sweet.",
+        "A tasty dessert but way too sweet for breakfast",
+        "Too Much Sugar",
+        "The white sugar is excessive."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly state the product is too sweet or has excessive sugar."
+    },
+    {
+      "assertion": "Sugary for a healthy cereal",
+      "supported": true,
+      "evidence": [
+        "too sugary for a \"healthy\" cereal",
+        "with 7 grams of sugar it is no wonder",
+        "It doesn't look like the Crunchy Vanilla Sunrise is all that healthy"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly state the cereal is too sugary or not as healthy as advertised, supporting the assertion."
+    },
+    {
+      "assertion": "Not as healthy as advertised",
+      "supported": true,
+      "evidence": [
+        "ok, not as healthy as the box would have you believe",
+        "Good-tasting cereal, but not quite as healthy as advertised...",
+        "this isn't quite the healthy breakfast option you were looking for"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly state the product is less healthy than advertised."
+    }
+  ],
+  "overall_hallucinated": false,
+  "overall_score": 5,
+  "summary": "Из 10 утверждений 0 не подтверждены контекстом."
+}

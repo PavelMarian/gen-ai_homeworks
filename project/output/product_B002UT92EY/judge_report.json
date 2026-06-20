@@ -1,0 +1,82 @@
+{
+  "assertions": [
+    {
+      "assertion": "Пользователи очень довольны продуктом",
+      "supported": false,
+      "evidence": [
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.9,
+      "comment": "Хотя есть один положительный отзыв, большинство отзывов указывают на серьезные проблемы с продуктом, что опровергает утверждение о всеобщей удовлетворенности."
+    },
+    {
+      "assertion": "Называют его лучшим",
+      "supported": true,
+      "evidence": [
+        "The absolute best",
+        "absolutely the best"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва прямо называют продукт лучшим, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Отмечают, что кошки его обожают",
+      "supported": true,
+      "evidence": [
+        "All four cats love it",
+        "Our cats love it!",
+        "Cats love it!"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly state that cats love the product, supporting the assertion."
+    },
+    {
+      "assertion": "Называют чудо-едой",
+      "supported": true,
+      "evidence": [
+        "Summary: Miracle food...",
+        "Summary: A miracle for our cat!"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва прямо называют продукт чудом, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Многие становятся приверженцами",
+      "supported": false,
+      "evidence": [
+        "Read Canidae's new formula horror stories at consumeraffairs.com.",
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.9,
+      "comment": "Отзывы в основном негативные, указывают на проблемы с кормом Canidae, что противоречит утверждению о приверженности."
+    },
+    {
+      "assertion": "Абсолютно лучший",
+      "supported": true,
+      "evidence": [
+        "Summary: absolutely the best",
+        "Summary: The absolute best"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва прямо утверждают, что продукт лучший, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Явных минусов в отзывах не выявлено",
+      "supported": false,
+      "evidence": [
+        "The only downside I've seen is a lack of durability, but that's not much of an issue with a little practice.",
+        "Canidae made my dogs VERY SICK",
+        "Definitely musty",
+        "This is a serious issue if there may be mold and mycotoxins behind it.",
+        "Lost a loyal customer- changed formula without notifying customers"
+      ],
+      "confidence": 1.0,
+      "comment": "Контекст содержит явные минусы: проблемы с долговечностью, болезнь собак, затхлость и возможные микотоксины, а также недовольство сменой формулы."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 2,
+  "summary": "Из 7 утверждений 3 не подтверждены контекстом."
+}

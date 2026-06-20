@@ -1,0 +1,85 @@
+{
+  "assertions": [
+    {
+      "assertion": "Excellent service",
+      "supported": true,
+      "evidence": [
+        "Summary: Excellent service",
+        "Text: The service is always fast and reliable."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention excellent service or fast/reliable service."
+    },
+    {
+      "assertion": "Excellent Product!",
+      "supported": true,
+      "evidence": [
+        "Excellent Product!",
+        "Excellent product, excellent price",
+        "Very fine product.",
+        "OMG this stuff is good!",
+        "Excellent. Product HAS NOT changed."
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews express high praise, directly or indirectly supporting the assertion."
+    },
+    {
+      "assertion": "First time user!",
+      "supported": true,
+      "evidence": [
+        "first time user and had no problems."
+      ],
+      "confidence": 0.9,
+      "comment": "The review explicitly states 'first time user', confirming the assertion."
+    },
+    {
+      "assertion": "ranks above the rest",
+      "supported": false,
+      "evidence": [
+        "OK - BUT NOT A WINNER IN ROBUST FLAVOR",
+        "Hot spots galore while on Canidae"
+      ],
+      "confidence": 0.9,
+      "comment": "The context contains negative reviews for other products, but no direct support for the assertion. The assertion appears to be a summary of a positive review, but the provided context does not confirm it."
+    },
+    {
+      "assertion": "I like it!!!",
+      "supported": true,
+      "evidence": [
+        "I like it!!!",
+        "This tastes so good!",
+        "LOVE IT!!!"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews express strong positive sentiment, directly supporting the assertion."
+    },
+    {
+      "assertion": "Good Quality Coconut Oil",
+      "supported": true,
+      "evidence": [
+        "Good Quality Coconut Oil",
+        "Good So Far - Garden of Life Coconut Oil",
+        "Great Coconut oil",
+        "This is the best coconut oil I've tried. The price is right and it is an excellent product.",
+        "This is a good quality extra virgin organic coconut oil.",
+        "the ONLY coconut oil in my pantry!!"
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews explicitly or implicitly confirm the high quality of the coconut oil."
+    },
+    {
+      "assertion": "Great for the hair!",
+      "supported": true,
+      "evidence": [
+        "I bought this because I wanted to use it for my hair. It's work on my relaxed hair is great! It makes my hair feel nice and soft and moisturized.",
+        "I am very pleased with this product. ... I put some on my hair immediately. My hair was incredibly soft for the next THREE days!!!",
+        "The best to seal that moisture in your hair!"
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews explicitly state the product is great for hair, with positive descriptions of softness and moisture."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 4,
+  "summary": "Из 7 утверждений 1 не подтверждены контекстом."
+}

@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "assertion": "delicious and practical",
+      "supported": true,
+      "evidence": [
+        "delicious and practical",
+        "tasty, healthy, convenient, surprisingly practical"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews directly mention both deliciousness and practicality."
+    },
+    {
+      "assertion": "Nice strong ginger flavor",
+      "supported": true,
+      "evidence": [
+        "a very strong authentic ginger taste",
+        "Very spicy, strong ginger flavor",
+        "This is a strong tea",
+        "The ginger flavor is nice and strong"
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly mention strong ginger flavor, confirming the assertion."
+    },
+    {
+      "assertion": "disappointed",
+      "supported": true,
+      "evidence": [
+        "Summary: disappointed",
+        "Summary: Disappointed by the overly sweet taste and vanilla aftertaste.",
+        "Summary: A little disappointed...... Text: I love my flavored k-cups, but this one I am somewhat disappointed with."
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly mention disappointment, directly supporting the assertion."
+    },
+    {
+      "assertion": "Weak!",
+      "supported": true,
+      "evidence": [
+        "I have found that many of the k-cups offered make coffee that is a little too weak.",
+        "Gloria Jean's Hazelnut is a little weak",
+        "The coffee is pretty good at the smallest cup size, but it gets weak fast the larger serving size you use."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention the coffee being weak, supporting the assertion."
+    },
+    {
+      "assertion": "Not Very Good",
+      "supported": true,
+      "evidence": [
+        "Not Very Good Taste",
+        "Not Very Good",
+        "it is now not a very good value"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly state 'Not Very Good' or similar negative sentiment, confirming the assertion."
+    }
+  ],
+  "overall_hallucinated": false,
+  "overall_score": 5,
+  "summary": "Из 5 утверждений 0 не подтверждены контекстом."
+}

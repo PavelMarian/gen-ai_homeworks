@@ -1,0 +1,129 @@
+{
+  "assertions": [
+    {
+      "assertion": "Натуральный продукт без жира, без добавок",
+      "supported": false,
+      "evidence": [
+        "Refreshing, natural and tasty, but not low calorie"
+      ],
+      "confidence": 0.9,
+      "comment": "Отзыв упоминает 'natural', но также указывает 'not low calorie', что противоречит утверждению 'без жира'. Другие отзывы не подтверждают утверждение."
+    },
+    {
+      "assertion": "Отличный хруст и вкус",
+      "supported": true,
+      "evidence": [
+        "Sweet, pleasant taste. Crunchy but not gritty.",
+        "Good Flavor, Doesn't Go Soggy"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва подтверждают приятный вкус и хрусткость, хотя один отзыв не относится к продукту."
+    },
+    {
+      "assertion": "Сладкие и хрустящие",
+      "supported": true,
+      "evidence": [
+        "Sweet, pleasant taste. Crunchy but not gritty."
+      ],
+      "confidence": 0.9,
+      "comment": "Один отзыв подтверждает и сладость, и хрусткость."
+    },
+    {
+      "assertion": "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+      "supported": false,
+      "evidence": [
+        "I worked out that, disregarding s/h, if you get a case of this stuff it works out to about 10 1/2 cents per ounce. Surely it's much cheaper, I thought, just to buy good juice and sparkling water at the store and mix it yourself. Well, after doing the numbers I found it is cheaper, but not much--by about two cents per ounce, and that doesn't include the cost of gas to get to the store.",
+        "They could work on the price too, $1.29 at the store for 2 bites is a bit ridiculous!",
+        "I've been buying Bare Fruit's dried granny smith apples from Costco for a while now-large 14oz bag was less than $5."
+      ],
+      "confidence": 0.9,
+      "comment": "Отзывы не подтверждают, что оптовая покупка значительно дешевле; один отзыв указывает на незначительную экономию, другие критикуют цены."
+    },
+    {
+      "assertion": "Вкус такой же, как в маленьких упаковках из магазина",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.9,
+      "comment": "Контекст не содержит информации о сравнении вкуса с маленькими упаковками из магазина."
+    },
+    {
+      "assertion": "Полезный и здоровый снек",
+      "supported": true,
+      "evidence": [
+        "All in all, IZZE Sparkling Clemintine Juice is a hit in our house. Great flavor, just enough in a can for a snack, and all without added refined sugars or caffeine! My daughter keeps saying- \"Mom, I just LOVE this stuff.\""
+      ],
+      "confidence": 0.8,
+      "comment": "Один отзыв описывает продукт как полезный снек без добавленного сахара и кофеина, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Вызывают привыкание (addicting)",
+      "supported": true,
+      "evidence": [
+        "Outstanding!  These apples are addicting.",
+        "Love these, they're so addicting and much cheaper to buy online.",
+        "Addictive in a Good Way"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly describe the product as 'addicting' or 'addictive', supporting the assertion."
+    },
+    {
+      "assertion": "Хорошо хранятся в пакете",
+      "supported": true,
+      "evidence": [
+        "I do keep them in the package, which is easy to fold or crimp for freshness, in the bottom crisper of the fridge.",
+        "Excellent, but keep them in the bag they come in!"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва подтверждают, что продукт хорошо хранится в пакете, один упоминает удобство упаковки для свежести."
+    },
+    {
+      "assertion": "Некоторые партии содержат крошки, а не цельные чипсы",
+      "supported": true,
+      "evidence": [
+        "I was hoping for larger pieces - more like chips! These are remnants, sadly. The pictures shows full, round apple pieces - I had not ONE full apple chips, 98% were 1/2\" in size and I had to pour them into my mouth like crumbs. Very disappointed!!!"
+      ],
+      "confidence": 0.95,
+      "comment": "Отзыв явно указывает на наличие крошек вместо цельных чипсов, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Приходится есть ложкой из-за крошек",
+      "supported": true,
+      "evidence": [
+        "The texture is nice and crunchy but it doesn't hew up the roof of your mouth.  It is not good to eat dry because of the teeny-tiny sedd puffs, they get everywhere.",
+        "end up with half the product in one bite just so you don't get sauce all over your hands and mouth."
+      ],
+      "confidence": 0.8,
+      "comment": "Отзывы упоминают крошки и неудобство при еде, что косвенно подтверждает необходимость есть ложкой."
+    },
+    {
+      "assertion": "Вкус некоторых партий неудовлетворительный",
+      "supported": false,
+      "evidence": [
+        "I thought it tasted like rolled up pieces of paper soaked in milk into which someone poured an artificial vanilla flavoring.",
+        "The taste at first is bland and bleh, but the after taste is sweet and stays in the back of your mouth for a while."
+      ],
+      "confidence": 0.7,
+      "comment": "Отзывы содержат негативные оценки вкуса, но не указывают на проблемы с партиями; скорее, это субъективное мнение."
+    },
+    {
+      "assertion": "Дорого в маленьких упаковках",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Контекст не содержит информации о цене или размере упаковки; упоминается только изменение формулы и размера коробки для уменьшения воздействия на планету."
+    },
+    {
+      "assertion": "Возможен затхлый привкус (musty taste) в некоторых пакетах",
+      "supported": true,
+      "evidence": [
+        "I was very excited to find this product in bulk, healthy and organic. What I wasn't happy about was the musty taste that every third bite or so possessed.",
+        "There was no musty taste in any of my bags, (I bought 4 1# packages)."
+      ],
+      "confidence": 0.9,
+      "comment": "Один отзыв подтверждает наличие затхлого привкуса, другой отрицает, но утверждение допускает 'в некоторых пакетах', что согласуется с обоими."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 1,
+  "summary": "Из 13 утверждений 5 не подтверждены контекстом."
+}

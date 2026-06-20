@@ -1,0 +1,65 @@
+{
+  "assertions": [
+    {
+      "assertion": "Pretty nice (вкусный)",
+      "supported": true,
+      "evidence": [
+        "Summary: Nice taste, pretty healthy",
+        "Summary: Pretty nice",
+        "Summary: Good Flavor, Doesn't Go Soggy",
+        "Summary: Smooth flavor",
+        "Text: Flavor is smooth without bitter after taste."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention positive taste, including 'Nice taste', 'Pretty nice', 'Good Flavor', and 'Smooth flavor', strongly supporting the assertion."
+    },
+    {
+      "assertion": "Less Additives than other Packaged Jerky (меньше добавок, чем в другой упакованной вяленой говядине)",
+      "supported": true,
+      "evidence": [
+        "And while all jerky is high in sodium, I realized these are a bit less than most competitors."
+      ],
+      "confidence": 0.8,
+      "comment": "The review mentions less sodium compared to competitors, which aligns with fewer additives, but does not explicitly state 'less additives'."
+    },
+    {
+      "assertion": "moldy all the time / molding issue (плесневеет, проблема с плесенью)",
+      "supported": true,
+      "evidence": [
+        "moldy all the time",
+        "this thing has a molding issue.",
+        "Have seen mold on a couple of different flavors of this jerky.",
+        "When I detected mustiness, I came here to warn others, and found that it had already been brought up. This is a serious issue if there may be mold and mycotoxins behind it."
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly mention mold or mustiness, confirming the assertion."
+    },
+    {
+      "assertion": "Like licking a salt cube! 1470mg of Sodium! (очень соленый — 1470 мг натрия)",
+      "supported": true,
+      "evidence": [
+        "Like licking a salt cube! 1470mg of Sodium!",
+        "Way Too Much Salt",
+        "Nutrition Fact says one serving's Sodium Content is 1540mg - 64% of daily value.",
+        "If you like SALT",
+        "you can taste the salt before the beef jerky",
+        "To much dietary salt."
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews confirm high sodium content, with specific mentions of 1470mg and 1540mg sodium per serving."
+    },
+    {
+      "assertion": "Try it in strip form and from somewhere else (рекомендуют попробовать в другом виде и у другого продавца)",
+      "supported": true,
+      "evidence": [
+        "Try it in strip form and from somewhere else",
+        "If you like bold, spicy flavored tea this is the tea for you. The cinnamon and orange flavor is robust and overpowering. Those that prefer a milder more natural taste of tea should look somewhere else."
+      ],
+      "confidence": 0.9,
+      "comment": "The assertion is directly stated in one review and echoed in another review suggesting alternatives for different preferences."
+    }
+  ],
+  "overall_hallucinated": false,
+  "overall_score": 5,
+  "summary": "Из 5 утверждений 0 не подтверждены контекстом."
+}

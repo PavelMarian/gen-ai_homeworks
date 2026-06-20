@@ -1,0 +1,280 @@
+{
+  "plan": {
+    "reasoning": "Сначала Researcher соберёт отзывы и выделит плюсы и минусы, затем Analyst сформирует отчёт, а Critic проверит его на полноту и согласованность.",
+    "subtasks": [
+      {
+        "id": 1,
+        "description": "Собрать отзывы о продукте B008EM51FA, выделить плюсы и минусы",
+        "agent": "researcher",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "description": "Сформировать финальный отчёт на основе данных researcher",
+        "agent": "analyst",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Проверить отчёт аналитика на полноту и согласованность, исправить при необходимости",
+        "agent": "critic",
+        "depends_on": [
+          2
+        ]
+      }
+    ]
+  },
+  "task_1": {
+    "agent": "researcher",
+    "result": {
+      "product_id": "B008EM51FA",
+      "texts": [],
+      "avg_rating": 4.48,
+      "review_count": 50,
+      "pros": [
+        "delicious and practical",
+        "Nice strong ginger flavor"
+      ],
+      "cons": [
+        "disappointed",
+        "Weak!",
+        "Not Very Good"
+      ],
+      "confidence": 0.8
+    }
+  },
+  "task_1_steps": [
+    {
+      "step": 1,
+      "tool": "get_product_stats",
+      "args": {
+        "product_id": "B008EM51FA"
+      },
+      "result": {
+        "product_id": "B008EM51FA",
+        "avg_rating": 4.48,
+        "review_count": 50
+      }
+    },
+    {
+      "step": 1,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B008EM51FA",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_606__0",
+          "review_10__0",
+          "review_716__0",
+          "review_430__0",
+          "review_59__0",
+          "review_208__0",
+          "review_333__0",
+          "review_149__0",
+          "review_15__0",
+          "review_457__0"
+        ],
+        "texts": [
+          "ProductId: B008EM51FA\nSummary: disappointed",
+          "ProductId: B008EM51FA\nSummary: Weak!",
+          "ProductId: B008EM51FA\nSummary: Not Very Good",
+          "ProductId: B008EM51FA\nSummary: Good stuff!",
+          "ProductId: B008EM51FA\nSummary: delicious and practical",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B0014X5O1C\nSummary: Very Good!",
+          "ProductId: B008EM51FA\nSummary: Can't live without it!",
+          "ProductId: B0009F3SA0\nSummary: Knocked me out",
+          "ProductId: B008EM51FA\nSummary: Nice strong ginger flavor"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B008EM51FA отзывы",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_606__0",
+          "review_10__0",
+          "review_716__0",
+          "review_430__0",
+          "review_59__0",
+          "review_333__0",
+          "review_208__0",
+          "review_149__0",
+          "review_15__0",
+          "review_457__0"
+        ],
+        "texts": [
+          "ProductId: B008EM51FA\nSummary: disappointed",
+          "ProductId: B008EM51FA\nSummary: Weak!",
+          "ProductId: B008EM51FA\nSummary: Not Very Good",
+          "ProductId: B008EM51FA\nSummary: Good stuff!",
+          "ProductId: B008EM51FA\nSummary: delicious and practical",
+          "ProductId: B0014X5O1C\nSummary: Very Good!",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B008EM51FA\nSummary: Can't live without it!",
+          "ProductId: B0009F3SA0\nSummary: Knocked me out",
+          "ProductId: B008EM51FA\nSummary: Nice strong ginger flavor"
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "tool": "extract_aspects",
+      "args": {
+        "texts": [
+          "ProductId: B008EM51FA\nSummary: disappointed",
+          "ProductId: B008EM51FA\nSummary: Weak!",
+          "ProductId: B008EM51FA\nSummary: Not Very Good",
+          "ProductId: B008EM51FA\nSummary: Good stuff!",
+          "ProductId: B008EM51FA\nSummary: delicious and practical",
+          "ProductId: B008EM51FA\nSummary: Can't live without it!",
+          "ProductId: B008EM51FA\nSummary: Nice strong ginger flavor"
+        ]
+      },
+      "result": {
+        "pros": [
+          "delicious and practical",
+          "Nice strong ginger flavor"
+        ],
+        "cons": [
+          "disappointed",
+          "Weak!",
+          "Not Very Good"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "action": "finish_research",
+      "data": {
+        "product_id": "B008EM51FA",
+        "texts": [],
+        "avg_rating": 4.48,
+        "review_count": 50,
+        "pros": [
+          "delicious and practical",
+          "Nice strong ginger flavor"
+        ],
+        "cons": [
+          "disappointed",
+          "Weak!",
+          "Not Very Good"
+        ],
+        "confidence": 0.8
+      }
+    }
+  ],
+  "task_2": {
+    "agent": "analyst",
+    "result": {
+      "product_id": "B008EM51FA",
+      "avg_rating": 4.48,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "delicious and practical",
+        "Nice strong ginger flavor"
+      ],
+      "cons": [
+        "disappointed",
+        "Weak!",
+        "Not Very Good"
+      ],
+      "summary": "Пользователи отмечают приятный вкус и практичность, но часть отзывов указывает на слабый вкус и разочарование.",
+      "confidence": 0.7
+    }
+  },
+  "task_2_steps": [
+    {
+      "step": "analyst",
+      "input": {
+        "product_id": "B008EM51FA",
+        "avg_rating": 4.48,
+        "review_count": 50,
+        "pros_count": 2,
+        "cons_count": 3,
+        "confidence_researcher": 0.8
+      },
+      "output": {
+        "product_id": "B008EM51FA",
+        "avg_rating": 4.48,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "delicious and practical",
+          "Nice strong ginger flavor"
+        ],
+        "cons": [
+          "disappointed",
+          "Weak!",
+          "Not Very Good"
+        ],
+        "summary": "Пользователи отмечают приятный вкус и практичность, но часть отзывов указывает на слабый вкус и разочарование.",
+        "confidence": 0.7
+      }
+    }
+  ],
+  "task_3": {
+    "agent": "critic",
+    "result": {
+      "product_id": "B008EM51FA",
+      "avg_rating": 4.48,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "delicious and practical",
+        "Nice strong ginger flavor"
+      ],
+      "cons": [
+        "disappointed",
+        "Weak!",
+        "Not Very Good"
+      ],
+      "summary": "Пользователи отмечают приятный вкус и практичность, но часть отзывов указывает на слабый вкус и разочарование. Однако количество отзывов (50) позволяет сделать предварительные выводы, но для большей уверенности требуется больше данных.",
+      "confidence": 0.7
+    }
+  },
+  "task_3_steps": [
+    {
+      "step": "critique",
+      "original_report": {
+        "product_id": "B008EM51FA",
+        "avg_rating": 4.48,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "delicious and practical",
+          "Nice strong ginger flavor"
+        ],
+        "cons": [
+          "disappointed",
+          "Weak!",
+          "Not Very Good"
+        ],
+        "summary": "Пользователи отмечают приятный вкус и практичность, но часть отзывов указывает на слабый вкус и разочарование.",
+        "confidence": 0.7
+      },
+      "improved_report": {
+        "product_id": "B008EM51FA",
+        "avg_rating": 4.48,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "delicious and practical",
+          "Nice strong ginger flavor"
+        ],
+        "cons": [
+          "disappointed",
+          "Weak!",
+          "Not Very Good"
+        ],
+        "summary": "Пользователи отмечают приятный вкус и практичность, но часть отзывов указывает на слабый вкус и разочарование. Однако количество отзывов (50) позволяет сделать предварительные выводы, но для большей уверенности требуется больше данных.",
+        "confidence": 0.7
+      }
+    }
+  ]
+}

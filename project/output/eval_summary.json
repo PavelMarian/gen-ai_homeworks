@@ -1,0 +1,6 @@
+{
+  "pass_rate": 33.33333333333333,
+  "total": 15,
+  "hallucinations": 10,
+  "hallucination_rate": 0.6666666666666666
+}

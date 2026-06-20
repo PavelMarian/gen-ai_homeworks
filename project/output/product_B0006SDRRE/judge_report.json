@@ -1,0 +1,99 @@
+{
+  "assertions": [
+    {
+      "assertion": "Вкусный чай",
+      "supported": true,
+      "evidence": [
+        "this tea is the best tea i have ever tasted",
+        "This is my favorite tea in the whole world",
+        "I enjoy this tea in the evening. It has a very rich flavor that does not need to be sweetened."
+      ],
+      "confidence": 0.95,
+      "comment": "Множество положительных отзывов подтверждают, что чай вкусный."
+    },
+    {
+      "assertion": "Потрясающий вкус",
+      "supported": true,
+      "evidence": [
+        "Sweet, pleasant taste.",
+        "Thick and chewy, not traditional jerky but delicious nonetheless",
+        "Good Flavor, Doesn't Go Soggy"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention positive taste attributes like sweet, pleasant, delicious, and good flavor."
+    },
+    {
+      "assertion": "Лучший чай",
+      "supported": true,
+      "evidence": [
+        "this tea is the best tea i have ever tasted.",
+        "Best Tea Ever!",
+        "This is my favorite tea in the whole world."
+      ],
+      "confidence": 0.95,
+      "comment": "Множество отзывов подтверждают, что чай считается лучшим."
+    },
+    {
+      "assertion": "Великолепный чай",
+      "supported": true,
+      "evidence": [
+        "This is my favorite tea in the whole world.",
+        "this tea is the best tea i have ever tasted.",
+        "Fabulous Tea!"
+      ],
+      "confidence": 1.0,
+      "comment": "Все три отзыва о чае B0006SDRRE положительно характеризуют его, используя превосходные степени."
+    },
+    {
+      "assertion": "Интенсивный пряный вкус с корицей и апельсином",
+      "supported": false,
+      "evidence": [
+        "I was disappointed to find that it didn't seem to contain clementine or even mandarin orange.",
+        "The taste is tart and fizzy along the lines of european citrus drinks (think Orangina), but with a slightly sweeter finish",
+        "This, to me, had a dull taste that reminded me of eating a frost burned orange."
+      ],
+      "confidence": 0.9,
+      "comment": "Отзывы не упоминают пряный вкус или корицу; упоминания апельсина негативные или нейтральные, не подтверждающие интенсивный пряный вкус."
+    },
+    {
+      "assertion": "Отлично подходит для встреч",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Контекст не содержит информации о пригодности продукта для встреч."
+    },
+    {
+      "assertion": "Любимый чай с 1970-х",
+      "supported": true,
+      "evidence": [
+        "I have loved its intensely spicy cinnamon-orange taste since the 1970's when I first tasted it and knew it only as Seattle tea."
+      ],
+      "confidence": 0.9,
+      "comment": "Один отзыв прямо утверждает, что любит этот чай с 1970-х годов."
+    },
+    {
+      "assertion": "Вкус субъективен — не всем может понравиться",
+      "supported": true,
+      "evidence": [
+        "I mean, it's food. What one person loves another person dislikes.",
+        "She, on the other hand, found it tasty, crunchy, satisfying, and overall delicious. To each his own, I suppose."
+      ],
+      "confidence": 0.9,
+      "comment": "Отзывы прямо подтверждают субъективность вкуса: один человек описывает продукт как невкусный, другой находит его вкусным."
+    },
+    {
+      "assertion": "Некоторые отзывы могут быть необъективными",
+      "supported": true,
+      "evidence": [
+        "The only downside I've seen is a lack of durability, but that's not much of an issue with a little practice.",
+        "I didn't read the reviews closely before I bought the product. When I detected mustiness, I came here to warn others, and found that it had already been brought up.",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in."
+      ],
+      "confidence": 0.8,
+      "comment": "Отзывы содержат субъективные мнения и личный опыт, что может указывать на необъективность, но также есть объективные предупреждения."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 3,
+  "summary": "Из 9 утверждений 2 не подтверждены контекстом."
+}

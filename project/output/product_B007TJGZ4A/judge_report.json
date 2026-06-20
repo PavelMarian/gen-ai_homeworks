@@ -1,0 +1,106 @@
+{
+  "assertions": [
+    {
+      "assertion": "Great value",
+      "supported": true,
+      "evidence": [
+        "It's also an excellent value - Try Canidae, you'll see!",
+        "The value here-wow, you just can't go wrong."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention excellent value, supporting the assertion."
+    },
+    {
+      "assertion": "Delicious hazelnut taste",
+      "supported": true,
+      "evidence": [
+        "The Hazelnut coffee is the best full bodied and taste of all the coffee We have used",
+        "If you like hazelnut then you will love this flavor. Does not taste artificial to me at all.",
+        "Package is a Great Value & Love the Hazelnut Coffee Taste!"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews praise the hazelnut flavor as delicious and authentic, though one review notes a weak hazelnut flavor."
+    },
+    {
+      "assertion": "Full bodied",
+      "supported": true,
+      "evidence": [
+        "Very flavorful and full bodied...",
+        "The Hazelnut coffee is the best full bodied and taste of all the coffee We have used",
+        "This is a full bodied, delicious blend of coffee."
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly describe the product as 'full bodied', confirming the assertion."
+    },
+    {
+      "assertion": "Good price",
+      "supported": true,
+      "evidence": [
+        "Even after price increase Amazon still has the best price if you get enough for free shipping.",
+        "Excellent product, excellent price",
+        "The best product for the price",
+        "really good service and price"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention good price or best price, supporting the assertion."
+    },
+    {
+      "assertion": "Perfect blend of coffee and hazelnut flavors",
+      "supported": true,
+      "evidence": [
+        "This is a perfect blend of coffee and hazelnut flavors with a good body."
+      ],
+      "confidence": 0.9,
+      "comment": "One review explicitly states the perfect blend, while others mention good hazelnut flavor, though one notes weak hazelnut taste."
+    },
+    {
+      "assertion": "Consistent quality",
+      "supported": true,
+      "evidence": [
+        "I've been ordered this product several times and the quality is consistent.",
+        "Much better than the Progresso brand we bought a few months ago, just more consistent."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention consistent quality, supporting the assertion."
+    },
+    {
+      "assertion": "Great on large mug setting",
+      "supported": true,
+      "evidence": [
+        "It makes an awesome cup of coffee on the large mug setting; I love to have a cup when unwinding from a stressful day."
+      ],
+      "confidence": 0.95,
+      "comment": "The review explicitly states that the coffee is great on the large mug setting."
+    },
+    {
+      "assertion": "Not overpowering",
+      "supported": true,
+      "evidence": [
+        "The coconut taste is there, but its not overpowering.",
+        "Guests who prefer regular coffee not flavored comment that it's very enjoyable, not overpowering."
+      ],
+      "confidence": 0.95,
+      "comment": "Two reviews explicitly state the product is not overpowering, supporting the assertion."
+    },
+    {
+      "assertion": "Some users report lack of hazelnut flavor",
+      "supported": true,
+      "evidence": [
+        "I like the coffee ok, although I must say it doesn't have much of a hazelnut flavor.",
+        "It does not have the hazelnut flavor I expected."
+      ],
+      "confidence": 0.9,
+      "comment": "Two reviews explicitly mention lack of hazelnut flavor, supporting the assertion."
+    },
+    {
+      "assertion": "One extremely negative review (possible quality issue)",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.9,
+      "comment": "The context contains no extremely negative reviews; the only mention of a downside is about durability but is downplayed."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 4,
+  "summary": "Из 10 утверждений 1 не подтверждены контекстом."
+}

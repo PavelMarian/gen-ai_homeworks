@@ -1,0 +1,106 @@
+{
+  "assertions": [
+    {
+      "assertion": "AMAZING",
+      "supported": true,
+      "evidence": [
+        "Just amazing!",
+        "AMAZING",
+        "Amazing, but Pricey"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly use the word 'amazing' or its variants, strongly supporting the assertion."
+    },
+    {
+      "assertion": "finally!",
+      "supported": true,
+      "evidence": [
+        "Summary: finally!",
+        "Text: Finally, good Tuna made only better by the Olive Oil - no more water packed for me..."
+      ],
+      "confidence": 0.9,
+      "comment": "The assertion 'finally!' is supported by multiple reviews expressing relief or satisfaction after a long wait."
+    },
+    {
+      "assertion": "OMG!!!!",
+      "supported": true,
+      "evidence": [
+        "OMG this stuff is good!",
+        "OMG I will never use anything ealse for a deep conditioner this made my hair so soft moisturized ect...."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews express strong positive reactions using 'OMG', supporting the assertion."
+    },
+    {
+      "assertion": "Highly Recommend",
+      "supported": true,
+      "evidence": [
+        "I recommend this highly, even though I'm frankly not sure how Izze does it.",
+        "Anyway, I highly recommend this product.  Also, at $0.15 per bag you can't go wrong.  Happy tea drinking!",
+        "I recommend it to anyone.  Very flavorful and full bodied..."
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly state high recommendation, directly supporting the assertion."
+    },
+    {
+      "assertion": "Spirited Jerky Product",
+      "supported": false,
+      "evidence": [
+        "We found this product to be a very slimy version of jerky. Almost like a canned catfood. We couldn't eat it.",
+        "The taste on these are just not right and what I was expecting. I thought it would taste just like the bagged jerky but its not. I would stay clear and stick with the bagged jerky."
+      ],
+      "confidence": 0.9,
+      "comment": "The assertion is not supported; reviews are mostly negative, describing the product as slimy and not tasting like expected."
+    },
+    {
+      "assertion": "Vegan-licious",
+      "supported": true,
+      "evidence": [
+        "Summary: Vegan-licious",
+        "Summary: Great Vegan food!",
+        "Summary: A Vegan must have",
+        "Summary: Spoiled Vegan"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly mention 'Vegan' positively, supporting the assertion."
+    },
+    {
+      "assertion": "The Best I've Found So Far",
+      "supported": true,
+      "evidence": [
+        "The Best I've Found So Far",
+        "The best tea I've ever had - and I've had lots!",
+        "Eastman casings are the best I've found online.",
+        "absolutely the best"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly state 'best' in relation to the product, strongly supporting the assertion."
+    },
+    {
+      "assertion": "Not what it claims or a bit deceptive",
+      "supported": true,
+      "evidence": [
+        "the packaging is rather deceptive as it is twice as big of a box than it needs to be. The bag is half full, and that isn't just because of settling!",
+        "Not what it claims or a bit deceptive"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention deceptive packaging or misleading claims, supporting the assertion."
+    },
+    {
+      "assertion": "Slimy and disgusting",
+      "supported": true,
+      "evidence": [
+        "the texture is very slimy and not like jerky at all",
+        "very rubbery and hard to stomach",
+        "So, they're slimy and taste awful.",
+        "We found this product to be a very slimy version of jerky.",
+        "The taste is indescribably yucky... Utterly disgusting."
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews consistently describe the product as slimy and disgusting."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 4,
+  "summary": "Из 9 утверждений 1 не подтверждены контекстом."
+}

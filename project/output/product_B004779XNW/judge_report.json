@@ -1,0 +1,92 @@
+{
+  "assertions": [
+    {
+      "assertion": "Bold и насыщенный вкус без горечи",
+      "supported": true,
+      "evidence": [
+        "If you like a bold coffee that's strong but not bitter, this is the coffee for you.",
+        "Fantastic Bold but Smooth Flavors",
+        "Big Bold Flavor!"
+      ],
+      "confidence": 0.95,
+      "comment": "Множество отзывов подтверждают смелый, насыщенный вкус без горечи."
+    },
+    {
+      "assertion": "Отличный вкус, вкусный кофе",
+      "supported": true,
+      "evidence": [
+        "This is a full bodied, delicious blend of coffee.",
+        "Great tasting coffee",
+        "AWESOME COFFEE!"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly praise the taste of the coffee, supporting the assertion."
+    },
+    {
+      "assertion": "Крепкий, но не горький",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Контекст не содержит информации о крепости или горечи, так как отзывы относятся к другим продуктам (собачий корм, закуски) и не связаны с утверждением."
+    },
+    {
+      "assertion": "Полнотелый, приятный вкус",
+      "supported": true,
+      "evidence": [
+        "Sweet, pleasant taste. Crunchy but not gritty.",
+        "Good Flavor, Doesn't Go Soggy"
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва подтверждают приятный вкус и хорошую текстуру, хотя один отзыв не связан с вкусом."
+    },
+    {
+      "assertion": "Глубокий тёмный вкус",
+      "supported": true,
+      "evidence": [
+        "Green mountain Dark magic is bold and dark without being bitter.",
+        "The Dark Magic contains even more sweet, bold smoked fruit and nutty aromatics than Newman's but both are tops in my book."
+      ],
+      "confidence": 0.9,
+      "comment": "Отзывы описывают кофе как 'bold and dark' и 'bold smoked fruit and nutty aromatics', что соответствует глубокому тёмному вкусу."
+    },
+    {
+      "assertion": "Любимый кофе многих покупателей",
+      "supported": true,
+      "evidence": [
+        "Great coffee!",
+        "This is a full bodied, delicious blend of coffee.",
+        "AWESOME COFFEE!",
+        "Great tasting coffee"
+      ],
+      "confidence": 0.9,
+      "comment": "Несколько отзывов положительно характеризуют кофе, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Превосходит другие способы заваривания",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Контекст не содержит информации о способах заваривания или сравнении с ними."
+    },
+    {
+      "assertion": "Некоторым не хватает насыщенности вкуса (робуста)",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Отзывы не содержат упоминаний о недостатке насыщенности вкуса или робусте; они касаются других продуктов и проблем."
+    },
+    {
+      "assertion": "Слишком кислый (acidic), что делает его неприятным для некоторых",
+      "supported": true,
+      "evidence": [
+        "I love bold, robust coffee and decided to purchase Green Mountain Dark Magic k-cups. Definitely a bold coffee, but so acidic it's not enjoyable.",
+        "This coffee is a packaged as a dark roast, however, I find the flavor to be more of a medium roast. It is also a bit acidic."
+      ],
+      "confidence": 0.9,
+      "comment": "Два отзыва прямо упоминают кислотность как негативный аспект, один из них говорит, что это делает кофе неприятным."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 2,
+  "summary": "Из 9 утверждений 3 не подтверждены контекстом."
+}

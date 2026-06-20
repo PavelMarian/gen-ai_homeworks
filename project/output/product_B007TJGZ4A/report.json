@@ -1,0 +1,21 @@
+{
+  "product_id": "B007TJGZ4A",
+  "avg_rating": 4.2,
+  "total_reviews_analyzed": 50,
+  "pros": [
+    "Great value",
+    "Delicious hazelnut taste",
+    "Full bodied",
+    "Good price",
+    "Perfect blend of coffee and hazelnut flavors",
+    "Consistent quality",
+    "Great on large mug setting",
+    "Not overpowering"
+  ],
+  "cons": [
+    "Some users report lack of hazelnut flavor",
+    "One extremely negative review (possible quality issue)"
+  ],
+  "summary": "Пользователи в целом довольны: отмечают отличное соотношение цены и качества, насыщенный вкус лесного ореха и сбалансированность. Однако есть единичные жалобы на недостаточный ореховый вкус и один крайне негативный отзыв. Учитывая количество отзывов (50), уверенность в выводах высокая.",
+  "confidence": 0.85
+}

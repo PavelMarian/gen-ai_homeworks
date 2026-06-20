@@ -1,0 +1,99 @@
+{
+  "assertions": [
+    {
+      "assertion": "Отличный корм для собак (премиум/супер-премиум)",
+      "supported": false,
+      "evidence": [
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.7,
+      "comment": "Несмотря на несколько положительных отзывов, есть серьезные негативные отзывы о том, что корм вызвал болезнь у собак, что противоречит утверждению об отличном качестве."
+    },
+    {
+      "assertion": "Собакам нравится этот корм",
+      "supported": false,
+      "evidence": [
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.7,
+      "comment": "Несколько отзывов указывают на негативную реакцию собак, что опровергает утверждение. Однако есть и положительные отзывы, поэтому уверенность не максимальная."
+    },
+    {
+      "assertion": "Рекомендуется заводчиками",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Ни один из отзывов не упоминает рекомендации заводчиков."
+    },
+    {
+      "assertion": "Быстрое и надёжное обслуживание при заказе",
+      "supported": false,
+      "evidence": [
+        "Great product - slow  and expensive shipping"
+      ],
+      "confidence": 0.9,
+      "comment": "Один отзыв подтверждает быстрое обслуживание, но другой явно указывает на медленную и дорогую доставку, что опровергает утверждение."
+    },
+    {
+      "assertion": "Подходит для всех пород и возрастов (щенки и взрослые)",
+      "supported": false,
+      "evidence": [
+        "This, however, they LOVED. Now ages 13 and 8, they are friskier than ever!",
+        "Canidae made my dogs VERY SICK",
+        "Turns older cats into healthy, vibrant kittens!",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.3,
+      "comment": "Отзывы противоречивы: один положительный для взрослых собак, но есть жалобы на болезнь и проблемы с переходом на новый корм. Нет явных упоминаний о щенках или всех породах."
+    },
+    {
+      "assertion": "Многие покупатели очень довольны и не хотят менять продукт",
+      "supported": false,
+      "evidence": [
+        "Lost a loyal customer- changed formula without notifying customers",
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.9,
+      "comment": "Большинство отзывов негативные, указывают на проблемы с продуктом и потерю лояльности. Лишь один отзыв положительный, но он не перевешивает."
+    },
+    {
+      "assertion": "Новая формула вызывает опасения у покупателей ('Beware the new formula')",
+      "supported": true,
+      "evidence": [
+        "Beware the new formula!!!!",
+        "Read Canidae's new formula horror stories at consumeraffairs.com.",
+        "I just found out about the NEW formula 2 days ago while researching Canidae on the web and found more disgruntled consumers.",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in."
+      ],
+      "confidence": 0.95,
+      "comment": "Множество отзывов прямо предупреждают о новой формуле и выражают недовольство, что подтверждает утверждение."
+    },
+    {
+      "assertion": "Некоторые собаки заболели после употребления корма",
+      "supported": true,
+      "evidence": [
+        "Canidae made my dogs VERY SICK",
+        "I've had to deal with 4 dogs who have been vomiting and have bloody diarrhea as well as vet bills for the past 17 days because of Canidae's neglectful oversight",
+        "Both of my dogs broke out in hot spots and they itched all the time. Like other reviews say they had chronic digestive upset"
+      ],
+      "confidence": 0.95,
+      "comment": "Множественные отзывы подтверждают, что собаки заболели после употребления корма Canidae, особенно после смены формулы."
+    },
+    {
+      "assertion": "Содержит кукурузу, что не нравится части покупателей ('Corn isn't dog food')",
+      "supported": false,
+      "evidence": [
+        "The Canidae, however, is perfect for my multi dog household... the food contains no corn, wheat or soy",
+        "My dogs are in love with Canidae Maintenance Formula for All Life Stages... there is no corn!"
+      ],
+      "confidence": 0.95,
+      "comment": "Контекст показывает, что Canidae не содержит кукурузу, что противоречит утверждению. Утверждение относится к другому продукту (зерновой хлопья), а не к корму для собак."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 1,
+  "summary": "Из 9 утверждений 7 не подтверждены контекстом."
+}

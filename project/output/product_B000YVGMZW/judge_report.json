@@ -1,0 +1,95 @@
+{
+  "assertions": [
+    {
+      "assertion": "Solid chunks, not mushy",
+      "supported": true,
+      "evidence": [
+        "Perfect size for brown bagging.  It may be small, but you still get big chunks of tuna, not that mushy stuff sold in grocery stores."
+      ],
+      "confidence": 0.9,
+      "comment": "The review explicitly states 'big chunks of tuna, not that mushy stuff', directly supporting the assertion."
+    },
+    {
+      "assertion": "Packed in olive oil",
+      "supported": true,
+      "evidence": [
+        "Finally, good Tuna made only better by the Olive Oil - no more water packed for me...",
+        "It does not specify extra virgin olive oil and I noticed that the oil was quite light in color, but - trusting that it is actually olive oil and not canola sneaked in dishonestly - the flavor was very good.",
+        "To me, tuna packed in olive oil is far superior to tuna packed in water.",
+        "If you like tuna in oil, you will enjoy this product. Excellent taste, appearance and texture. Keep in mind that not all 'tuna in oil' is in olive oil - this one is."
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly state that the tuna is packed in olive oil, confirming the assertion."
+    },
+    {
+      "assertion": "Good taste",
+      "supported": true,
+      "evidence": [
+        "Love the bold taste...like having good strong coffee at Starbucks but paying far less making it at home.",
+        "Very good taste.",
+        "Flavor is smooth without bitter after taste."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention good taste, with only one negative summary but no negative text."
+    },
+    {
+      "assertion": "Perfect size for lunch",
+      "supported": true,
+      "evidence": [
+        "Perfect smaller size for lunch.",
+        "1 oz size is a perfect high protein, low fat snack.",
+        "This size serving is a nice addition to a lunch box or to top a salad or rice with."
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly mention the size being perfect for lunch or as a snack, supporting the assertion."
+    },
+    {
+      "assertion": "Not Italian tuna anymore",
+      "supported": true,
+      "evidence": [
+        "Lies!! Not Italian tuna! Not the same tuna anymore! Beware!",
+        "this USED to be Italian tuna, but it's now Pacific tuna, packaged in US and Thailand",
+        "this is NOT ITALIAN TUNA ANYMORE. The label clearly says product of Thailand.",
+        "The last batch I got was the 'made in Thailand' version"
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews confirm the tuna is no longer from Italy, now sourced from Thailand."
+    },
+    {
+      "assertion": "Deceptive labeling",
+      "supported": true,
+      "evidence": [
+        "Not what it claims or a bit deceptive",
+        "I find the labeling of it as \"clementine\" totally shameless and off-putting.",
+        "the rather loose legal requirements for labeling something \"organic\""
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention deceptive or misleading labeling, including claims about product identity and organic labeling."
+    },
+    {
+      "assertion": "Not as good as old canned tuna",
+      "supported": false,
+      "evidence": [
+        "This product is not only so good, but also comes at such a good price, that I am left speechless. Suffice it to say your search ends here: this is the ultimate canned tuna, period.",
+        "Best canned tuna out there",
+        "Like the other reviews here, I agree that this is the best canned tuna I've had since childhood, when tuna in oil was the only way you could buy it."
+      ],
+      "confidence": 0.9,
+      "comment": "Most reviews praise the product as the best canned tuna, contradicting the assertion that it is not as good as old canned tuna."
+    },
+    {
+      "assertion": "Small size",
+      "supported": true,
+      "evidence": [
+        "I should have noticed the size of the cans when I was ordering, but I was assuming they were at least 12 oz. So I was a surprised by the small amount you get in each can.",
+        "Perfect size for brown bagging. It may be small, but you still get big chunks of tuna",
+        "1 oz size is a perfect hight protein, low fat snack."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention small size, both as a surprise and as a positive attribute for portability."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 4,
+  "summary": "Из 8 утверждений 1 не подтверждены контекстом."
+}

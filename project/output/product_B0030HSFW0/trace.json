@@ -1,0 +1,245 @@
+{
+  "plan": {
+    "reasoning": "Сначала Researcher соберёт отзывы и выделит плюсы и минусы, затем Analyst сформирует отчёт, а Critic проверит его на полноту и согласованность.",
+    "subtasks": [
+      {
+        "id": 1,
+        "description": "Собрать отзывы о продукте B0030HSFW0, извлечь плюсы и минусы",
+        "agent": "researcher",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "description": "Сформировать финальный отчёт с плюсами и минусами",
+        "agent": "analyst",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Проверить отчёт на полноту и согласованность, исправить при необходимости",
+        "agent": "critic",
+        "depends_on": [
+          2
+        ]
+      }
+    ]
+  },
+  "task_1": {
+    "agent": "researcher",
+    "result": {
+      "product_id": "B0030HSFW0",
+      "texts": [],
+      "avg_rating": 4.24,
+      "review_count": 50,
+      "pros": [
+        "Great casings to work with",
+        "easy to get",
+        "We made our own sausages!"
+      ],
+      "cons": [
+        "Holes upon holes",
+        "Not all I had hoped for"
+      ],
+      "confidence": 0.85
+    }
+  },
+  "task_1_steps": [
+    {
+      "step": 1,
+      "tool": "get_product_stats",
+      "args": {
+        "product_id": "B0030HSFW0"
+      },
+      "result": {
+        "product_id": "B0030HSFW0",
+        "avg_rating": 4.24,
+        "review_count": 50
+      }
+    },
+    {
+      "step": 1,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B0030HSFW0",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_199__0",
+          "review_370__0",
+          "review_113__0",
+          "review_127__0",
+          "review_208__0",
+          "review_15__0",
+          "review_330__0",
+          "review_429__0",
+          "review_679__0",
+          "review_452__0"
+        ],
+        "texts": [
+          "ProductId: B0030HSFW0\nSummary: Great casings to work with",
+          "ProductId: B0030HSFW0\nSummary: easy to get",
+          "ProductId: B0030HSFW0\nSummary: Holes upon holes",
+          "ProductId: B0030HSFW0\nSummary: Sausage Skins",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B0009F3SA0\nSummary: Knocked me out",
+          "ProductId: B0009F3SA0\nSummary: Just amazing!",
+          "ProductId: B0030HSFW0\nSummary: We made our own sausages!",
+          "ProductId: B0030HSFW0\nSummary: Not all I had hoped for.",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "extract_aspects",
+      "args": {
+        "texts": [
+          "ProductId: B0030HSFW0\nSummary: Great casings to work with",
+          "ProductId: B0030HSFW0\nSummary: easy to get",
+          "ProductId: B0030HSFW0\nSummary: Holes upon holes",
+          "ProductId: B0030HSFW0\nSummary: Sausage Skins",
+          "ProductId: B0030HSFW0\nSummary: We made our own sausages!",
+          "ProductId: B0030HSFW0\nSummary: Not all I had hoped for."
+        ]
+      },
+      "result": {
+        "pros": [
+          "Great casings to work with",
+          "easy to get",
+          "We made our own sausages!"
+        ],
+        "cons": [
+          "Holes upon holes",
+          "Not all I had hoped for"
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "action": "finish_research",
+      "data": {
+        "product_id": "B0030HSFW0",
+        "texts": [],
+        "avg_rating": 4.24,
+        "review_count": 50,
+        "pros": [
+          "Great casings to work with",
+          "easy to get",
+          "We made our own sausages!"
+        ],
+        "cons": [
+          "Holes upon holes",
+          "Not all I had hoped for"
+        ],
+        "confidence": 0.85
+      }
+    }
+  ],
+  "task_2": {
+    "agent": "analyst",
+    "result": {
+      "product_id": "B0030HSFW0",
+      "avg_rating": 4.24,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Great casings to work with",
+        "easy to get",
+        "We made our own sausages!"
+      ],
+      "cons": [
+        "Holes upon holes",
+        "Not all I had hoped for"
+      ],
+      "summary": "Пользователи хвалят удобство работы с оболочками и возможность делать домашние колбасы, но отмечают наличие дырок и несоответствие ожиданиям.",
+      "confidence": 0.8
+    }
+  },
+  "task_2_steps": [
+    {
+      "step": "analyst",
+      "input": {
+        "product_id": "B0030HSFW0",
+        "avg_rating": 4.24,
+        "review_count": 50,
+        "pros_count": 3,
+        "cons_count": 2,
+        "confidence_researcher": 0.85
+      },
+      "output": {
+        "product_id": "B0030HSFW0",
+        "avg_rating": 4.24,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Great casings to work with",
+          "easy to get",
+          "We made our own sausages!"
+        ],
+        "cons": [
+          "Holes upon holes",
+          "Not all I had hoped for"
+        ],
+        "summary": "Пользователи хвалят удобство работы с оболочками и возможность делать домашние колбасы, но отмечают наличие дырок и несоответствие ожиданиям.",
+        "confidence": 0.8
+      }
+    }
+  ],
+  "task_3": {
+    "agent": "critic",
+    "result": {
+      "product_id": "B0030HSFW0",
+      "avg_rating": 4.24,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Great casings to work with",
+        "easy to get",
+        "We made our own sausages!"
+      ],
+      "cons": [
+        "Holes upon holes",
+        "Not all I had hoped for"
+      ],
+      "summary": "Пользователи хвалят удобство работы с оболочками и возможность делать домашние колбасы, но отмечают наличие дырок и несоответствие ожиданиям. Данных недостаточно для полной оценки, так как проанализировано всего 50 отзывов.",
+      "confidence": 0.8
+    }
+  },
+  "task_3_steps": [
+    {
+      "step": "critique",
+      "original_report": {
+        "product_id": "B0030HSFW0",
+        "avg_rating": 4.24,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Great casings to work with",
+          "easy to get",
+          "We made our own sausages!"
+        ],
+        "cons": [
+          "Holes upon holes",
+          "Not all I had hoped for"
+        ],
+        "summary": "Пользователи хвалят удобство работы с оболочками и возможность делать домашние колбасы, но отмечают наличие дырок и несоответствие ожиданиям.",
+        "confidence": 0.8
+      },
+      "improved_report": {
+        "product_id": "B0030HSFW0",
+        "avg_rating": 4.24,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Great casings to work with",
+          "easy to get",
+          "We made our own sausages!"
+        ],
+        "cons": [
+          "Holes upon holes",
+          "Not all I had hoped for"
+        ],
+        "summary": "Пользователи хвалят удобство работы с оболочками и возможность делать домашние колбасы, но отмечают наличие дырок и несоответствие ожиданиям. Данных недостаточно для полной оценки, так как проанализировано всего 50 отзывов.",
+        "confidence": 0.8
+      }
+    }
+  ]
+}

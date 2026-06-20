@@ -1,0 +1,599 @@
+{
+  "plan": {
+    "reasoning": "Сначала Researcher соберёт отзывы и выделит плюсы и минусы, затем Analyst сформирует отчёт, а Critic проверит его на полноту и согласованность.",
+    "subtasks": [
+      {
+        "id": 1,
+        "description": "Собрать отзывы о продукте B001IZM92S, извлечь плюсы и минусы",
+        "agent": "researcher",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "description": "Сформировать финальный отчёт с плюсами и минусами",
+        "agent": "analyst",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Проверить отчёт на полноту и согласованность, исправить при необходимости",
+        "agent": "critic",
+        "depends_on": [
+          2
+        ]
+      }
+    ]
+  },
+  "task_1": {
+    "agent": "researcher",
+    "result": {
+      "product_id": "B001IZM92S",
+      "texts": [],
+      "avg_rating": 4.26,
+      "review_count": 50,
+      "pros": [
+        "Натуральный продукт без жира, без добавок",
+        "Отличный хруст и вкус",
+        "Сладкие и хрустящие",
+        "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+        "Вкус такой же, как в маленьких упаковках из магазина",
+        "Полезный и здоровый снек",
+        "Вызывают привыкание (addicting)",
+        "Хорошо хранятся в пакете"
+      ],
+      "cons": [
+        "Некоторые партии содержат крошки, а не цельные чипсы",
+        "Приходится есть ложкой из-за крошек",
+        "Вкус некоторых партий неудовлетворительный",
+        "Дорого в маленьких упаковках",
+        "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+      ],
+      "confidence": 0.85
+    }
+  },
+  "task_1_steps": [
+    {
+      "step": 1,
+      "tool": "get_product_stats",
+      "args": {
+        "product_id": "B001IZM92S"
+      },
+      "result": {
+        "product_id": "B001IZM92S",
+        "avg_rating": 4.26,
+        "review_count": 50
+      }
+    },
+    {
+      "step": 1,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B001IZM92S",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_208__0",
+          "review_243__0",
+          "review_452__0",
+          "review_349__0",
+          "review_172__0",
+          "review_421__0",
+          "review_8__0",
+          "review_283__0",
+          "review_123__0",
+          "review_199__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          "ProductId: B001IZM92S\nSummary: Back to the store for me",
+          "ProductId: B001QE7J2G\nSummary: Very Impressed",
+          "ProductId: B001QE7J2G\nSummary: Very impressed",
+          "ProductId: B001IZM92S\nSummary: Delicious healthy snack",
+          "ProductId: B0030HSFW0\nSummary: Great casings to work with"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "search_reviews",
+      "args": {
+        "k": 10,
+        "query": "B001IZM92S отзывы"
+      },
+      "result": {
+        "ids": [
+          "review_208__0",
+          "review_349__0",
+          "review_243__0",
+          "review_172__0",
+          "review_452__0",
+          "review_421__0",
+          "review_283__0",
+          "review_606__0",
+          "review_8__0",
+          "review_123__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: Back to the store for me",
+          "ProductId: B001QE7J2G\nSummary: Very impressed",
+          "ProductId: B008EM51FA\nSummary: disappointed",
+          "ProductId: B001QE7J2G\nSummary: Very Impressed",
+          "ProductId: B001IZM92S\nSummary: Delicious healthy snack"
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "tool": "search_reviews",
+      "args": {
+        "k": 10,
+        "query": "\"B001IZM92S\" review"
+      },
+      "result": {
+        "ids": [
+          "review_208__0",
+          "review_243__0",
+          "review_349__0",
+          "review_452__0",
+          "review_172__0",
+          "review_17__3",
+          "review_299__3",
+          "review_563__0",
+          "review_283__0",
+          "review_18__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          ".  It does grow on you.<br /><br />All in all, a recommendable product, but somebody should probably get some clementine juice in there, or change the name.<br /><br />Disclosure: This review was written for the Amazon Vine Volunteer Review Program.  The product was provided for the purposes of the review.",
+          ". Also I had a much longer review describing the Clementine, but when I saw the flavors split up into their own reviews I went to the apple and deleted the other flavors and save. It deleted the written review on all three drinks! So that is why this is now missing so much, I hope amazon can replace the original review.",
+          "ProductId: B000YVGMZW\nSummary: Nutrition info in review below:",
+          "ProductId: B001QE7J2G\nSummary: Very impressed",
+          "ProductId: B0040K41MY\nSummary: Very good cereal.  I'm eating it as I type this review"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"CAUTION\""
+      },
+      "result": {
+        "ids": [
+          "review_208__0",
+          "review_243__0",
+          "review_452__0",
+          "review_349__0",
+          "review_172__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"A miracle\""
+      },
+      "result": {
+        "ids": [
+          "review_243__0",
+          "review_481__0",
+          "review_141__0",
+          "review_172__0",
+          "review_208__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B002UT92EY\nSummary: Miracle food...",
+          "ProductId: B002UT92EY\nSummary: A miracle for our cat!",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          "ProductId: B001IZM92S\nSummary: CAUTION"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Quality Product\""
+      },
+      "result": {
+        "ids": [
+          "review_349__0",
+          "review_208__0",
+          "review_283__0",
+          "review_315__0",
+          "review_8__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001QE7J2G\nSummary: Very impressed",
+          "ProductId: B002UT92EY\nSummary: Quality product\nText: Quality product as one of the best.  The 2012 price increase is not too welcome as I have been ordering also from petfood.com for $38.98 with tax/shipping.  I recommend this cat food to anyone who wants one of the best products on the market.",
+          "ProductId: B001QE7J2G\nSummary: Very Impressed"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Re-hydrated\""
+      },
+      "result": {
+        "ids": [
+          "review_452__0",
+          "review_208__0",
+          "review_243__0",
+          "review_29__0",
+          "review_585__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B0014X5O1C\nSummary: Half-Pint Thirst Quencher",
+          "ProductId: B001IZM92S\nSummary: Love these, they're so addicting and much cheaper to buy online.\nText: These are super expensive in the supermarket. This is the best<br />deal you can get. I used to buy these at costco and they stopped<br />selling them. This is a really good deal, they came fast and taste amazing."
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Yummm\""
+      },
+      "result": {
+        "ids": [
+          "review_172__0",
+          "review_243__0",
+          "review_208__0",
+          "review_452__0",
+          "review_385__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: Tasty, but are like crumbs!"
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Delicious healthy snack\""
+      },
+      "result": {
+        "ids": [
+          "review_123__0",
+          "review_738__0",
+          "review_295__0",
+          "review_364__0",
+          "review_292__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: Delicious healthy snack",
+          "ProductId: B001IZM92S\nSummary: great, healthy snack",
+          "ProductId: B000LKZD4W\nSummary: Very tasty and healthy jerky snack!",
+          "ProductId: B001IZM92S\nSummary: Great HEALTHY snack\nText: Great product. No fat. All natural, nothing added. Great crunch and taste! Favorite company by far!",
+          "ProductId: B00014IVPQ\nSummary: Simply delicious and healthy too!"
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Back to the store\""
+      },
+      "result": {
+        "ids": [
+          "review_421__0",
+          "review_303__0",
+          "review_156__0",
+          "review_15__0",
+          "review_607__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: Back to the store for me",
+          "ProductId: B0040K41MY\nSummary: Will Buy Again!",
+          "ProductId: B001IZM92S\nSummary: Excellent Product!\nText: I was a little concerned about buying these in bulk after reading some of the previous reviews.  My concerns were unfounded, I was delighted with the product.  There was no musty taste in any of my bags, (I bought 4 1# packages).  They taste exactly the same as what I buy in the smaller snack packages from the grocery store.  This is a great product, sweet and crunchy, and WAY less expensive to purchase this way.",
+          "ProductId: B0009F3SA0\nSummary: Knocked me out",
+          "ProductId: B0014X5O1C\nSummary: Love the taste, hate the size\nText: I love the taste but wish it came in a larger size... I find myself drinking two back-to-back as one isn't enough for me.  Besides that, I love the actual 'drink'."
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Tasty but are like crumbs\""
+      },
+      "result": {
+        "ids": [
+          "review_385__0",
+          "review_267__0",
+          "review_572__0",
+          "review_497__0",
+          "review_172__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: Tasty, but are like crumbs!",
+          "ProductId: B002UT92EY\nSummary: Tasty but a little TOO tasty",
+          "ProductId: B0040K41MY\nSummary: Sweet, pleasant taste. Crunchy but not gritty.",
+          "ProductId: B001IZM92S\nSummary: Crumbs-Need a Spoon to Eat\nText: Maybe it's the type of apple but I wasn't very satisfied with the taste. These were like the crumbs at the bottom of a potato chip bag. I haven't even opened the second bag and I won't purchase these again. The apples I buy from Fresh Market taste much better; they tend to run out of stock that's why I tried these.",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!"
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "tool": "search_reviews",
+      "args": {
+        "k": 5,
+        "query": "\"B001IZM92S\" \"Love these\""
+      },
+      "result": {
+        "ids": [
+          "review_289__0",
+          "review_11__0",
+          "review_36__0",
+          "review_392__0",
+          "review_381__0"
+        ],
+        "texts": [
+          "ProductId: B0040K41MY\nSummary: A Tad Sweet",
+          "ProductId: B001IZM92S\nSummary: I can't describe how much I love these apple chips!",
+          "ProductId: B0014X5O1C\nSummary: The Entire Family Loves Izze",
+          "ProductId: B001IZM92S\nSummary: Much cheaper in bulk!\nText: I love these apples but they were expensive in small amounts.  These were wonderful, we just kept them in the bag they were shipped in and closed it with a chip clip.",
+          "ProductId: B004779XNW\nSummary: Magical"
+        ]
+      }
+    },
+    {
+      "step": 6,
+      "tool": "extract_aspects",
+      "args": {
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B001IZM92S\nSummary: A miracle!",
+          "ProductId: B001IZM92S\nSummary: Re-hydrated",
+          "ProductId: B001IZM92S\nSummary: A Quality Product",
+          "ProductId: B001IZM92S\nSummary: Yummm! Crunch!",
+          "ProductId: B001IZM92S\nSummary: Back to the store for me",
+          "ProductId: B001IZM92S\nSummary: Delicious healthy snack",
+          "ProductId: B001IZM92S\nSummary: great, healthy snack",
+          "ProductId: B001IZM92S\nSummary: Great HEALTHY snack\nText: Great product. No fat. All natural, nothing added. Great crunch and taste! Favorite company by far!",
+          "ProductId: B001IZM92S\nSummary: Excellent Product!\nText: I was a little concerned about buying these in bulk after reading some of the previous reviews.  My concerns were unfounded, I was delighted with the product.  There was no musty taste in any of my bags, (I bought 4 1# packages).  They taste exactly the same as what I buy in the smaller snack packages from the grocery store.  This is a great product, sweet and crunchy, and WAY less expensive to purchase this way.",
+          "ProductId: B001IZM92S\nSummary: Tasty, but are like crumbs!",
+          "ProductId: B001IZM92S\nSummary: Crumbs-Need a Spoon to Eat\nText: Maybe it's the type of apple but I wasn't very satisfied with the taste. These were like the crumbs at the bottom of a potato chip bag. I haven't even opened the second bag and I won't purchase these again. The apples I buy from Fresh Market taste much better; they tend to run out of stock that's why I tried these.",
+          "ProductId: B001IZM92S\nSummary: I can't describe how much I love these apple chips!",
+          "ProductId: B001IZM92S\nSummary: Much cheaper in bulk!\nText: I love these apples but they were expensive in small amounts.  These were wonderful, we just kept them in the bag they were shipped in and closed it with a chip clip.",
+          "ProductId: B001IZM92S\nSummary: Love these, they're so addicting and much cheaper to buy online.\nText: These are super expensive in the supermarket. This is the best deal you can get. I used to buy these at costco and they stopped selling them. This is a really good deal, they came fast and taste amazing."
+        ]
+      },
+      "result": {
+        "pros": [
+          "Great product, no fat, all natural, nothing added, great crunch and taste",
+          "Sweet and crunchy, way less expensive to purchase in bulk",
+          "Taste exactly like smaller snack packages from grocery store",
+          "Delicious healthy snack",
+          "Love these, they're so addicting and much cheaper to buy online",
+          "Much cheaper in bulk, wonderful, kept fresh in bag"
+        ],
+        "cons": [
+          "Tasty but are like crumbs",
+          "Crumbs, need a spoon to eat, not satisfied with taste, like crumbs at bottom of chip bag",
+          "Musty taste in some bags (though reviewer didn't experience it)",
+          "Expensive in small amounts"
+        ]
+      }
+    },
+    {
+      "step": 7,
+      "action": "finish_research",
+      "data": {
+        "product_id": "B001IZM92S",
+        "texts": [],
+        "avg_rating": 4.26,
+        "review_count": 50,
+        "pros": [
+          "Натуральный продукт без жира, без добавок",
+          "Отличный хруст и вкус",
+          "Сладкие и хрустящие",
+          "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+          "Вкус такой же, как в маленьких упаковках из магазина",
+          "Полезный и здоровый снек",
+          "Вызывают привыкание (addicting)",
+          "Хорошо хранятся в пакете"
+        ],
+        "cons": [
+          "Некоторые партии содержат крошки, а не цельные чипсы",
+          "Приходится есть ложкой из-за крошек",
+          "Вкус некоторых партий неудовлетворительный",
+          "Дорого в маленьких упаковках",
+          "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+        ],
+        "confidence": 0.85
+      }
+    }
+  ],
+  "task_2": {
+    "agent": "analyst",
+    "result": {
+      "product_id": "B001IZM92S",
+      "avg_rating": 4.26,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Натуральный продукт без жира, без добавок",
+        "Отличный хруст и вкус",
+        "Сладкие и хрустящие",
+        "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+        "Вкус такой же, как в маленьких упаковках из магазина",
+        "Полезный и здоровый снек",
+        "Вызывают привыкание (addicting)",
+        "Хорошо хранятся в пакете"
+      ],
+      "cons": [
+        "Некоторые партии содержат крошки, а не цельные чипсы",
+        "Приходится есть ложкой из-за крошек",
+        "Вкус некоторых партий неудовлетворительный",
+        "Дорого в маленьких упаковках",
+        "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+      ],
+      "summary": "Пользователи хвалят натуральность, вкус и хруст продукта, а также выгоду при оптовой покупке, но отмечают непостоянство качества: некоторые партии содержат крошки или имеют неприятный привкус.",
+      "confidence": 0.8
+    }
+  },
+  "task_2_steps": [
+    {
+      "step": "analyst",
+      "input": {
+        "product_id": "B001IZM92S",
+        "avg_rating": 4.26,
+        "review_count": 50,
+        "pros_count": 8,
+        "cons_count": 5,
+        "confidence_researcher": 0.85
+      },
+      "output": {
+        "product_id": "B001IZM92S",
+        "avg_rating": 4.26,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Натуральный продукт без жира, без добавок",
+          "Отличный хруст и вкус",
+          "Сладкие и хрустящие",
+          "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+          "Вкус такой же, как в маленьких упаковках из магазина",
+          "Полезный и здоровый снек",
+          "Вызывают привыкание (addicting)",
+          "Хорошо хранятся в пакете"
+        ],
+        "cons": [
+          "Некоторые партии содержат крошки, а не цельные чипсы",
+          "Приходится есть ложкой из-за крошек",
+          "Вкус некоторых партий неудовлетворительный",
+          "Дорого в маленьких упаковках",
+          "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+        ],
+        "summary": "Пользователи хвалят натуральность, вкус и хруст продукта, а также выгоду при оптовой покупке, но отмечают непостоянство качества: некоторые партии содержат крошки или имеют неприятный привкус.",
+        "confidence": 0.8
+      }
+    }
+  ],
+  "task_3": {
+    "agent": "critic",
+    "result": {
+      "product_id": "B001IZM92S",
+      "avg_rating": 4.26,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Натуральный продукт без жира, без добавок",
+        "Отличный хруст и вкус",
+        "Сладкие и хрустящие",
+        "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+        "Вкус такой же, как в маленьких упаковках из магазина",
+        "Полезный и здоровый снек",
+        "Вызывают привыкание (addicting)",
+        "Хорошо хранятся в пакете"
+      ],
+      "cons": [
+        "Некоторые партии содержат крошки, а не цельные чипсы",
+        "Приходится есть ложкой из-за крошек",
+        "Вкус некоторых партий неудовлетворительный",
+        "Дорого в маленьких упаковках",
+        "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+      ],
+      "summary": "Пользователи хвалят натуральность, вкус и хруст продукта, а также выгоду при оптовой покупке, но отмечают непостоянство качества: некоторые партии содержат крошки или имеют неприятный привкус. На основе 50 отзывов средний рейтинг 4.26, что указывает на в целом положительное восприятие, однако проблема с крошками и вариативностью вкуса снижает уверенность.",
+      "confidence": 0.8
+    }
+  },
+  "task_3_steps": [
+    {
+      "step": "critique",
+      "original_report": {
+        "product_id": "B001IZM92S",
+        "avg_rating": 4.26,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Натуральный продукт без жира, без добавок",
+          "Отличный хруст и вкус",
+          "Сладкие и хрустящие",
+          "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+          "Вкус такой же, как в маленьких упаковках из магазина",
+          "Полезный и здоровый снек",
+          "Вызывают привыкание (addicting)",
+          "Хорошо хранятся в пакете"
+        ],
+        "cons": [
+          "Некоторые партии содержат крошки, а не цельные чипсы",
+          "Приходится есть ложкой из-за крошек",
+          "Вкус некоторых партий неудовлетворительный",
+          "Дорого в маленьких упаковках",
+          "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+        ],
+        "summary": "Пользователи хвалят натуральность, вкус и хруст продукта, а также выгоду при оптовой покупке, но отмечают непостоянство качества: некоторые партии содержат крошки или имеют неприятный привкус.",
+        "confidence": 0.8
+      },
+      "improved_report": {
+        "product_id": "B001IZM92S",
+        "avg_rating": 4.26,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Натуральный продукт без жира, без добавок",
+          "Отличный хруст и вкус",
+          "Сладкие и хрустящие",
+          "Гораздо дешевле при покупке оптом/в упаковках по 1 фунту",
+          "Вкус такой же, как в маленьких упаковках из магазина",
+          "Полезный и здоровый снек",
+          "Вызывают привыкание (addicting)",
+          "Хорошо хранятся в пакете"
+        ],
+        "cons": [
+          "Некоторые партии содержат крошки, а не цельные чипсы",
+          "Приходится есть ложкой из-за крошек",
+          "Вкус некоторых партий неудовлетворительный",
+          "Дорого в маленьких упаковках",
+          "Возможен затхлый привкус (musty taste) в некоторых пакетах"
+        ],
+        "summary": "Пользователи хвалят натуральность, вкус и хруст продукта, а также выгоду при оптовой покупке, но отмечают непостоянство качества: некоторые партии содержат крошки или имеют неприятный привкус. На основе 50 отзывов средний рейтинг 4.26, что указывает на в целом положительное восприятие, однако проблема с крошками и вариативностью вкуса снижает уверенность.",
+        "confidence": 0.8
+      }
+    }
+  ]
+}

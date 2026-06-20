@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "assertion": "Just amazing!",
+      "supported": true,
+      "evidence": [
+        "Summary: Just amazing!",
+        "Summary: AMAZING",
+        "Summary: Amazing food",
+        "Text: ...this cat food is amazing...",
+        "Summary: A miracle!"
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly use 'amazing' or similar superlatives, strongly supporting the assertion."
+    },
+    {
+      "assertion": "Good stuff, very potent.",
+      "supported": true,
+      "evidence": [
+        "Good stuff, very potent.",
+        "Really good stuff. Has more and better ingredients than most sleep aid tea.",
+        "It's a very good tasting tea if you like licorice, that flavor is among the more potent flavors, in my opinion."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews directly state the product is good and potent, supporting the assertion."
+    },
+    {
+      "assertion": "Sleepy & tasty",
+      "supported": true,
+      "evidence": [
+        "Summary: Sleepy & tasty",
+        "Summary: A better tasting sleepy-time tea",
+        "Summary: Better than Sleepytime",
+        "Text: Of all the valerian teas I've tried, this one tastes best."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention both sleepiness and taste positively."
+    },
+    {
+      "assertion": "Knocked me out",
+      "supported": true,
+      "evidence": [
+        "one bag knocked me out after 30 minutes and I suffer from MAJOR insomnia"
+      ],
+      "confidence": 0.9,
+      "comment": "The review explicitly states that the tea knocked the user out, directly supporting the assertion."
+    },
+    {
+      "assertion": "Citrus after taste",
+      "supported": true,
+      "evidence": [
+        "I don't like the citrus after taste the tea leaves in the back of my throat.",
+        "too long a brewing time really kicks up the notch on that citrus after taste"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention citrus aftertaste, confirming the assertion."
+    }
+  ],
+  "overall_hallucinated": false,
+  "overall_score": 5,
+  "summary": "Из 5 утверждений 0 не подтверждены контекстом."
+}

@@ -1,0 +1,65 @@
+{
+  "assertions": [
+    {
+      "assertion": "Great casings to work with",
+      "supported": true,
+      "evidence": [
+        "Great casings to work with",
+        "Excellent product. Works well.",
+        "These casings worked really well for me",
+        "The casings were easy to work with",
+        "The casings were flexible but strong"
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews confirm the casings are easy to work with, flexible, and strong."
+    },
+    {
+      "assertion": "easy to get",
+      "supported": true,
+      "evidence": [
+        "Summary: easy to get",
+        "Text: ...easy to work with.",
+        "Text: ...easy to use."
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews mention ease of use or getting, supporting the assertion."
+    },
+    {
+      "assertion": "We made our own sausages!",
+      "supported": true,
+      "evidence": [
+        "So first time we tried to make our sausages!",
+        "We are having a lot of fun making delicious sausages with the help of these casings.",
+        "Never made sausage before and had no idea what to expect when ordering this product. I found it to be easy to use and rather fun to make my own sausausages.",
+        "This was the first time I'd ever made my own sausage"
+      ],
+      "confidence": 1.0,
+      "comment": "All reviews explicitly mention making their own sausages, confirming the assertion."
+    },
+    {
+      "assertion": "Holes upon holes",
+      "supported": true,
+      "evidence": [
+        "Some of the casing had holes in them, and some were different sizes that was hard to put on to the tube.",
+        "The casings I got were riddled with holes, most of which were too small to cause much trouble. However the majority of the casings in the pack had at least one serious breech that led to a number of blown casings in the stuffing process",
+        "I was very disappointed with how many holes I found in each length of casing - between 2 and 5 holes per casing."
+      ],
+      "confidence": 0.95,
+      "comment": "Multiple reviews explicitly mention holes in casings, strongly supporting the assertion."
+    },
+    {
+      "assertion": "Not all I had hoped for",
+      "supported": true,
+      "evidence": [
+        "I thought it may have been a fluke so I tried 2 more times...both times with the same result.",
+        "I don't know what happened, but this lot of GJ Hazelnut is NOT GOOD!!!",
+        "I had great expectations! ... it doesnt seem to do that at all & seemed to MAYBE upset my stomach a little"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews express disappointment, directly matching the assertion."
+    }
+  ],
+  "overall_hallucinated": false,
+  "overall_score": 5,
+  "summary": "Из 5 утверждений 0 не подтверждены контекстом."
+}

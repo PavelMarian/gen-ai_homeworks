@@ -1,0 +1,21 @@
+{
+  "product_id": "B0040K41MY",
+  "avg_rating": 3.64,
+  "total_reviews_analyzed": 50,
+  "pros": [
+    "Delicious",
+    "Crunchy",
+    "Gluten free",
+    "Light",
+    "Flavorful",
+    "Holds up well in milk",
+    "Good with yogurt"
+  ],
+  "cons": [
+    "Too sweet",
+    "Sugary for a healthy cereal",
+    "Not as healthy as advertised"
+  ],
+  "summary": "Пользователи хвалят вкус, хрусткость и безглютеновость, но отмечают излишнюю сладость и несоответствие заявленной полезности. Данных достаточно для выводов.",
+  "confidence": 0.85
+}

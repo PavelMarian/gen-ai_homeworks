@@ -1,0 +1,97 @@
+{
+  "assertions": [
+    {
+      "assertion": "Вкусный (Yum!)",
+      "supported": true,
+      "evidence": [
+        "Yum, yum yum, Enjoy!",
+        "Summary: Healthy and Yummy!",
+        "Summary: Yum!"
+      ],
+      "confidence": 0.9,
+      "comment": "Multiple reviews explicitly mention 'yum' or 'yummy', directly supporting the assertion."
+    },
+    {
+      "assertion": "Очень хороший",
+      "supported": false,
+      "evidence": [
+        "Canidae made my dogs VERY SICK",
+        "New food and or changed formula's need to be introduced to animals slowly. Very slowly. However, I was not given this option by Canidae when I ran out of the old All Stages Life Dry Dog Food and purchased a new bag of the new formula (no warning label) with none of the old to mix in. That is the problem I'm having with my four dogs, 2 of which are 12 years old"
+      ],
+      "confidence": 0.9,
+      "comment": "Большинство отзывов негативные, указывают на проблемы со здоровьем собак, что противоречит утверждению 'очень хороший'."
+    },
+    {
+      "assertion": "Отличный продукт",
+      "supported": true,
+      "evidence": [
+        "Very fine product.",
+        "Excellent Product!",
+        "Excellent product, excellent price"
+      ],
+      "confidence": 0.9,
+      "comment": "Несколько отзывов прямо называют продукт отличным, хотя есть один негативный отзыв о болезни собак, но он может быть связан с неправильным введением корма."
+    },
+    {
+      "assertion": "Игристость и терпкость (pop and tart)",
+      "supported": true,
+      "evidence": [
+        "Summary: pop and tart",
+        "The pomegranite is a mix of apple, grape, pineapple, lemon and pomegranite and packs quite a tart and sweet punch!"
+      ],
+      "confidence": 0.9,
+      "comment": "Прямое упоминание 'pop and tart' в одном отзыве и описание терпкости в другом подтверждают утверждение."
+    },
+    {
+      "assertion": "Хороший размер, не слишком сладкий",
+      "supported": true,
+      "evidence": [
+        "Good size, not too sweet",
+        "Moist and just the right size",
+        "1 oz size is a perfect hight protein, low fat snack"
+      ],
+      "confidence": 0.9,
+      "comment": "Несколько отзывов подтверждают хороший размер, а также упоминается, что не слишком сладкий (not too sweet)."
+    },
+    {
+      "assertion": "Очень освежающий",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.0,
+      "comment": "Контекст не содержит упоминаний об освежающем эффекте; отзывы о корме для животных не связаны с утверждением."
+    },
+    {
+      "assertion": "Напоминает Orangina",
+      "supported": true,
+      "evidence": [
+        "If you like Orangina, give Izze \"Sparkling Clementine\" a shot...",
+        "In general, this stacks up pretty well compared this to the well-known, similar drink Orangina.",
+        "The taste is tart and fizzy along the lines of european citrus drinks (think Orangina), but with a slightly sweeter finish",
+        "Izze \"Sparkling Clementine\" is strongly reminiscent of the \"Orangina\" brand of soft drink, minus the pulp..."
+      ],
+      "confidence": 1.0,
+      "comment": "Multiple reviews explicitly compare Izze Sparkling Clementine to Orangina, confirming the assertion."
+    },
+    {
+      "assertion": "Некоторые считают, что вкус не дотягивает до настоящего клементина (Fine -- But Not Clementine)",
+      "supported": false,
+      "evidence": [
+        "The Clementine flavor tastes just like the fruit.",
+        "Izze \"Sparkling Clementine\" is strongly reminiscent of the \"Orangina\" brand of soft drink, minus the pulp... a personal favorite of mine.",
+        "Clementine is the family favorite."
+      ],
+      "confidence": 0.95,
+      "comment": "Контекст в основном положительный, утверждает, что вкус похож на фрукт, а не хуже. Нет отзывов, которые бы говорили, что вкус не дотягивает."
+    },
+    {
+      "assertion": "Чего-то не хватает (Only one itsy bitsy little thing missing...)",
+      "supported": false,
+      "evidence": [],
+      "confidence": 0.9,
+      "comment": "Утверждение из отзыва о продукте B0014X5O1C, но контекст содержит отзывы о разных продуктах (B0014X5O1C, B002UT92EY) и не связан с утверждением."
+    }
+  ],
+  "overall_hallucinated": true,
+  "overall_score": 1,
+  "summary": "Из 9 утверждений 4 не подтверждены контекстом."
+}

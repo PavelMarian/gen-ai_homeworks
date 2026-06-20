@@ -1,0 +1,314 @@
+{
+  "plan": {
+    "reasoning": "Сначала Researcher соберёт отзывы и выделит плюсы и минусы, затем Analyst сформирует отчёт, а Critic проверит его.",
+    "subtasks": [
+      {
+        "id": 1,
+        "description": "Собрать отзывы о продукте B0006SDRRE и извлечь плюсы и минусы",
+        "agent": "researcher",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "description": "Сформировать финальный отчёт с плюсами и минусами",
+        "agent": "analyst",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Проверить отчёт на полноту и согласованность, исправить при необходимости",
+        "agent": "critic",
+        "depends_on": [
+          2
+        ]
+      }
+    ]
+  },
+  "task_1": {
+    "agent": "researcher",
+    "result": {
+      "product_id": "B0006SDRRE",
+      "texts": [],
+      "avg_rating": 4.7,
+      "review_count": 50,
+      "pros": [
+        "Вкусный чай",
+        "Потрясающий вкус",
+        "Лучший чай",
+        "Великолепный чай",
+        "Интенсивный пряный вкус с корицей и апельсином",
+        "Отлично подходит для встреч",
+        "Любимый чай с 1970-х"
+      ],
+      "cons": [
+        "Вкус субъективен — не всем может понравиться",
+        "Некоторые отзывы могут быть необъективными"
+      ],
+      "confidence": 0.85
+    }
+  },
+  "task_1_steps": [
+    {
+      "step": 1,
+      "tool": "get_product_stats",
+      "args": {
+        "product_id": "B0006SDRRE"
+      },
+      "result": {
+        "product_id": "B0006SDRRE",
+        "avg_rating": 4.7,
+        "review_count": 50
+      }
+    },
+    {
+      "step": 1,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B0006SDRRE",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_208__0",
+          "review_20__0",
+          "review_15__0",
+          "review_145__0",
+          "review_606__0",
+          "review_740__0",
+          "review_142__0",
+          "review_300__0",
+          "review_333__0",
+          "review_21__0"
+        ],
+        "texts": [
+          "ProductId: B001IZM92S\nSummary: CAUTION",
+          "ProductId: B0006SDRRE\nSummary: Delicious tea",
+          "ProductId: B0009F3SA0\nSummary: Knocked me out",
+          "ProductId: B0006SDRRE\nSummary: Awesome Tea!",
+          "ProductId: B008EM51FA\nSummary: disappointed",
+          "ProductId: B0006SDRRE\nSummary: Fabulous Tea!",
+          "ProductId: B000LKZD4W\nSummary: AMAZING",
+          "ProductId: B0006SDRRE\nSummary: Best Tea Ever!",
+          "ProductId: B0014X5O1C\nSummary: Very Good!",
+          "ProductId: B0006SDRRE\nSummary: You won't be disapointed!"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "search_reviews",
+      "args": {
+        "query": "B0006SDRRE tea review",
+        "k": 10
+      },
+      "result": {
+        "ids": [
+          "review_20__0",
+          "review_145__0",
+          "review_300__0",
+          "review_740__0",
+          "review_578__0",
+          "review_649__0",
+          "review_374__0",
+          "review_689__0",
+          "review_403__0",
+          "review_87__0"
+        ],
+        "texts": [
+          "ProductId: B0006SDRRE\nSummary: Delicious tea",
+          "ProductId: B0006SDRRE\nSummary: Awesome Tea!",
+          "ProductId: B0006SDRRE\nSummary: Best Tea Ever!",
+          "ProductId: B0006SDRRE\nSummary: Fabulous Tea!",
+          "ProductId: B0006SDRRE\nSummary: Get together for tea...",
+          "ProductId: B0006SDRRE\nSummary: The best tea I've ever had - and I've had lots!",
+          "ProductId: B0006SDRRE\nSummary: the last tea you will ever want to drink",
+          "ProductId: B0006SDRRE\nSummary: Tea is a matter of personal taste.\nText: I would not call this review objective. I have awarded MarketSpice Tea five stars, and I have loved its intensely spicy cinnamon-orange taste since the 1970's when I first tasted it and knew it only as Seattle tea. Chacun a son gout.",
+          "ProductId: B0009F3SA0\nSummary: A better tasting sleepy-time tea",
+          "ProductId: B0006SDRRE\nSummary: Great item!!\nText: Love this tea!  I mix it regular tea in a brewer.  Love it!!"
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "tool": "extract_aspects",
+      "args": {
+        "texts": [
+          "ProductId: B0006SDRRE\nSummary: Delicious tea",
+          "ProductId: B0006SDRRE\nSummary: Awesome Tea!",
+          "ProductId: B0006SDRRE\nSummary: Best Tea Ever!",
+          "ProductId: B0006SDRRE\nSummary: Fabulous Tea!",
+          "ProductId: B0006SDRRE\nSummary: Get together for tea...",
+          "ProductId: B0006SDRRE\nSummary: The best tea I've ever had - and I've had lots!",
+          "ProductId: B0006SDRRE\nSummary: the last tea you will ever want to drink",
+          "ProductId: B0006SDRRE\nSummary: Tea is a matter of personal taste.\nText: I would not call this review objective. I have awarded MarketSpice Tea five stars, and I have loved its intensely spicy cinnamon-orange taste since the 1970's when I first tasted it and knew it only as Seattle tea. Chacun a son gout.",
+          "ProductId: B0006SDRRE\nSummary: Great item!!\nText: Love this tea!  I mix it regular tea in a brewer.  Love it!!"
+        ]
+      },
+      "result": {
+        "pros": [
+          "Delicious",
+          "Awesome",
+          "Best tea ever",
+          "Fabulous",
+          "Great for get togethers",
+          "Intensely spicy cinnamon-orange taste",
+          "Love it"
+        ],
+        "cons": [
+          "Not objective",
+          "Matter of personal taste"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "action": "finish_research",
+      "data": {
+        "product_id": "B0006SDRRE",
+        "texts": [],
+        "avg_rating": 4.7,
+        "review_count": 50,
+        "pros": [
+          "Вкусный чай",
+          "Потрясающий вкус",
+          "Лучший чай",
+          "Великолепный чай",
+          "Интенсивный пряный вкус с корицей и апельсином",
+          "Отлично подходит для встреч",
+          "Любимый чай с 1970-х"
+        ],
+        "cons": [
+          "Вкус субъективен — не всем может понравиться",
+          "Некоторые отзывы могут быть необъективными"
+        ],
+        "confidence": 0.85
+      }
+    }
+  ],
+  "task_2": {
+    "agent": "analyst",
+    "result": {
+      "product_id": "B0006SDRRE",
+      "avg_rating": 4.7,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Вкусный чай",
+        "Потрясающий вкус",
+        "Лучший чай",
+        "Великолепный чай",
+        "Интенсивный пряный вкус с корицей и апельсином",
+        "Отлично подходит для встреч",
+        "Любимый чай с 1970-х"
+      ],
+      "cons": [
+        "Вкус субъективен — не всем может понравиться",
+        "Некоторые отзывы могут быть необъективными"
+      ],
+      "summary": "Пользователи высоко оценивают вкус и аромат чая, отмечая его интенсивный пряный вкус с корицей и апельсином, а также долгую историю потребления. Однако вкус субъективен, и некоторые отзывы могут быть необъективными.",
+      "confidence": 0.85
+    }
+  },
+  "task_2_steps": [
+    {
+      "step": "analyst",
+      "input": {
+        "product_id": "B0006SDRRE",
+        "avg_rating": 4.7,
+        "review_count": 50,
+        "pros_count": 7,
+        "cons_count": 2,
+        "confidence_researcher": 0.85
+      },
+      "output": {
+        "product_id": "B0006SDRRE",
+        "avg_rating": 4.7,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Вкусный чай",
+          "Потрясающий вкус",
+          "Лучший чай",
+          "Великолепный чай",
+          "Интенсивный пряный вкус с корицей и апельсином",
+          "Отлично подходит для встреч",
+          "Любимый чай с 1970-х"
+        ],
+        "cons": [
+          "Вкус субъективен — не всем может понравиться",
+          "Некоторые отзывы могут быть необъективными"
+        ],
+        "summary": "Пользователи высоко оценивают вкус и аромат чая, отмечая его интенсивный пряный вкус с корицей и апельсином, а также долгую историю потребления. Однако вкус субъективен, и некоторые отзывы могут быть необъективными.",
+        "confidence": 0.85
+      }
+    }
+  ],
+  "task_3": {
+    "agent": "critic",
+    "result": {
+      "product_id": "B0006SDRRE",
+      "avg_rating": 4.7,
+      "total_reviews_analyzed": 50,
+      "pros": [
+        "Вкусный чай",
+        "Потрясающий вкус",
+        "Лучший чай",
+        "Великолепный чай",
+        "Интенсивный пряный вкус с корицей и апельсином",
+        "Отлично подходит для встреч",
+        "Любимый чай с 1970-х"
+      ],
+      "cons": [
+        "Вкус субъективен — не всем может понравиться",
+        "Некоторые отзывы могут быть необъективными"
+      ],
+      "summary": "Пользователи высоко оценивают вкус и аромат чая, отмечая его интенсивный пряный вкус с корицей и апельсином, а также долгую историю потребления. Однако вкус субъективен, и некоторые отзывы могут быть необъективными. Данных достаточно для выводов, но учтена субъективность вкуса.",
+      "confidence": 0.85
+    }
+  },
+  "task_3_steps": [
+    {
+      "step": "critique",
+      "original_report": {
+        "product_id": "B0006SDRRE",
+        "avg_rating": 4.7,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Вкусный чай",
+          "Потрясающий вкус",
+          "Лучший чай",
+          "Великолепный чай",
+          "Интенсивный пряный вкус с корицей и апельсином",
+          "Отлично подходит для встреч",
+          "Любимый чай с 1970-х"
+        ],
+        "cons": [
+          "Вкус субъективен — не всем может понравиться",
+          "Некоторые отзывы могут быть необъективными"
+        ],
+        "summary": "Пользователи высоко оценивают вкус и аромат чая, отмечая его интенсивный пряный вкус с корицей и апельсином, а также долгую историю потребления. Однако вкус субъективен, и некоторые отзывы могут быть необъективными.",
+        "confidence": 0.85
+      },
+      "improved_report": {
+        "product_id": "B0006SDRRE",
+        "avg_rating": 4.7,
+        "total_reviews_analyzed": 50,
+        "pros": [
+          "Вкусный чай",
+          "Потрясающий вкус",
+          "Лучший чай",
+          "Великолепный чай",
+          "Интенсивный пряный вкус с корицей и апельсином",
+          "Отлично подходит для встреч",
+          "Любимый чай с 1970-х"
+        ],
+        "cons": [
+          "Вкус субъективен — не всем может понравиться",
+          "Некоторые отзывы могут быть необъективными"
+        ],
+        "summary": "Пользователи высоко оценивают вкус и аромат чая, отмечая его интенсивный пряный вкус с корицей и апельсином, а также долгую историю потребления. Однако вкус субъективен, и некоторые отзывы могут быть необъективными. Данных достаточно для выводов, но учтена субъективность вкуса.",
+        "confidence": 0.85
+      }
+    }
+  ]
+}
